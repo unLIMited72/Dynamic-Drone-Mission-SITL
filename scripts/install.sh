@@ -33,7 +33,7 @@ if (( CHECK )); then
  "$ROOT/third_party/gap_sdk_venv/bin/python" -c 'from elftools.elf.elffile import ELFFile; print("SDK Python imports PASS")'
  (( ${#missing[@]} == 0 )); exit
 fi
-(( ACCEPT )) || { echo 'Required upstream drone-models has UNVERIFIED rights. Read docs/EXTERNAL_DEPENDENCIES.md; explicit --accept-unverified-license is required.'; exit 2; }
+(( ACCEPT )) || { echo 'Required upstream drone-models declares MIT but its LICENSE text is missing. Read docs/EXTERNAL_DEPENDENCIES.md; explicit --accept-unverified-license is required.'; exit 2; }
 if (( ${#missing[@]} )); then
  printf 'System packages to install (GPU drivers are not changed): %s\n' "${missing[*]}"
  if (( ! YES )); then read -r -p 'Install these packages with sudo? [y/N] ' answer; [[ "$answer" == y ]] || exit 2; fi

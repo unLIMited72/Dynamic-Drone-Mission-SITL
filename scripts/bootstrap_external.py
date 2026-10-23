@@ -13,8 +13,8 @@ def main():
  for dep in rows:
   url=dep['repository'];commit=dep['commit'];dest=(ROOT/dep['destination']).resolve()
   if not dest.is_relative_to(ROOT) or not url.startswith('https://github.com/') or not url.endswith('.git') or len(commit)!=40 or any(c not in '0123456789abcdef' for c in commit):raise ValueError('Invalid dependency lock entry')
-  if dep['license_status']=='UNVERIFIED':
-   print('UNVERIFIED usage/modification rights:',dep['name'],'; upstream clone grants no license.',flush=True)
+  if dep['license_status'] in ('UNVERIFIED', 'MIT_DECLARED_LICENSE_FILE_MISSING'):
+   print(dep['license_status'] + ':', dep['name'], '; declaration evidence and remaining scope are documented; upstream clone grants no license.', flush=True)
    if not a.check and not a.accept_unverified_license:raise SystemExit('Explicit --accept-unverified-license required; this acknowledges risk, not permission.')
   patch=ROOT/dep['patch'] if dep.get('patch') else None
   if patch and digest(patch)!=dep['patch_sha256']:raise SystemExit('Patch hash mismatch')

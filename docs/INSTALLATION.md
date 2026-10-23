@@ -24,7 +24,7 @@ cd Dynamic-Drone-Mission-SITL
 ./virtual_aideck/run.sh stop
 ```
 
-디스플레이 없는 환경에서는 `start --headless`를 사용합니다. 설치 스크립트는 자신의 경로에서 프로젝트 루트를 구합니다. 새 사용자 홈에서도 서버 경로를 수정할 필요가 없습니다. ZIP은 해제 후 프로젝트 루트에서 같은 명령을 사용합니다. ZIP에 `.git`은 필요하지 않으며 외부 저장소 다운로드용 git은 필요합니다. 게시된 Release가 없는 경우 ZIP 다운로드 링크는 제공하지 않습니다.
+디스플레이 없는 환경에서는 `start --headless`를 사용합니다. 설치 스크립트는 자신의 경로에서 프로젝트 루트를 구합니다. 새 사용자 홈에서도 서버 경로를 수정할 필요가 없습니다. ZIP은 해제 후 프로젝트 루트에서 같은 명령을 사용합니다. ZIP에 `.git`은 필요하지 않으며 외부 저장소 다운로드용 git은 필요합니다. v1.0.0 ZIP과 SHA256SUMS는 GitHub Releases의 실제 게시된 Assets에서 받습니다.
 
 경기장은 `start --headless --config virtual_aideck/config/arena_mission3.json`처럼 선택합니다. Basic이 기본값입니다. [설정](CONFIGURATION.md)을 참조하십시오. TCP5000 Host Decoder는 `virtual_aideck/runtime/host_protocol/e2e_client.py`입니다. 외부 시험 프로젝트의 독립 Live Viewer는 배포하지 않으며 Runtime의 `host_protocol/preview.py`를 유지합니다.
 

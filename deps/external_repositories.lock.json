@@ -55,13 +55,19 @@
       "commit": "512c864ffa55081ef4e80fadde2e861f22f45943",
       "destination": "crazyflie-firmware/tools/crazyflie-simulation/simulator_files/mujoco/drone-models",
       "category": "C",
-      "license_status": "UNVERIFIED",
+      "license_status": "MIT_DECLARED_LICENSE_FILE_MISSING",
       "distribution": "UPSTREAM_ONLY",
       "runtime_required": true,
       "build_required": true,
       "installation_method": "pinned Git checkout",
       "patch": null,
-      "verification": "HEAD + remote + tracked-file hashes + patch hash"
+      "verification": "HEAD + remote + tracked-file hashes + patch hash",
+      "license_evidence": {
+        "pinned_pyproject": "https://github.com/utiasDSL/drone-models/blob/512c864ffa55081ef4e80fadde2e861f22f45943/pyproject.toml",
+        "pypi": "https://pypi.org/project/drone-models/0.1.0b0/",
+        "successor_license": "https://github.com/utiasDSL/crazyflow/blob/44752d1b87496f25b44da6584ea68e06fb7ee11b/LICENSE",
+        "scope": "MIT declaration evidence; LICENSE text missing; no automatic retroactivity to pinned commit or all 3D assets"
+      }
     },
     {
       "name": "cflib",
