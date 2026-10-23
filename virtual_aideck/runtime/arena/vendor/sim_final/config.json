@@ -1,0 +1,683 @@
+{
+  "seed": 231,
+  "arena": {
+    "stage1": [
+      6,
+      12,
+      -3,
+      3
+    ],
+    "stage2": [
+      -18,
+      6,
+      -2.5,
+      2.5
+    ],
+    "stage3": [
+      -38,
+      -18,
+      -10,
+      10
+    ],
+    "gate_y": -1.4,
+    "gate_width": 1.5,
+    "gate_height": 2.6
+  },
+  "fence": {
+    "height": 2.8,
+    "spacing": 0.2,
+    "wire_radius": 0.005,
+    "collision_enabled": true
+  },
+  "markers": {
+    "size_m": 0.3,
+    "board_m": 0.4,
+    "positions": [
+      [
+        8.2,
+        2.965,
+        1.25
+      ],
+      [
+        11.965,
+        1.5,
+        1.25
+      ],
+      [
+        10.5,
+        -2.965,
+        1.25
+      ]
+    ],
+    "ids": [
+      1,
+      2,
+      3
+    ],
+    "direction_by_id": {
+      "1": "right",
+      "2": "right",
+      "3": "west_exit"
+    },
+    "xyaxes": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "stage2": {
+    "rings": [
+      [
+        3.8,
+        0.0,
+        1.0
+      ],
+      [
+        0.5999999999999996,
+        0.35,
+        1.5
+      ],
+      [
+        -2.5999999999999996,
+        -0.35,
+        2.0
+      ]
+    ],
+    "ring_inner_diameter": 1.1,
+    "ring_tube_radius": 0.045,
+    "ring_segments": 32,
+    "block_x": -6.4,
+    "block_y": 1.1,
+    "block_size": [
+      0.7,
+      0.7,
+      2.5
+    ],
+    "walls": [
+      [
+        -10.2,
+        -1,
+        3
+      ],
+      [
+        -15,
+        1,
+        3
+      ]
+    ],
+    "wall_height": 2.5,
+    "wall_thickness": 0.1,
+    "layout": {
+      "length_m": 24,
+      "ring_offsets_m": [
+        2.2,
+        5.4,
+        8.6
+      ],
+      "block_offset_m": 12.4,
+      "wall_offsets_m": [
+        16.2,
+        21
+      ]
+    },
+    "wall_colors": [
+      [
+        0.5,
+        0.12,
+        0.08,
+        1
+      ],
+      [
+        0.72,
+        0.4,
+        0.12,
+        1
+      ]
+    ],
+    "ring_lateral_offsets_m": [
+      0.0,
+      0.35,
+      -0.35
+    ]
+  },
+  "track": {
+    "straight_half_length_m": 4.0,
+    "turn_radius_m": 4.0,
+    "lane_width_m": 2.0,
+    "grid_x": [
+      -4,
+      0,
+      4
+    ],
+    "grid_y": [
+      -4,
+      0,
+      4
+    ],
+    "grid_turn_radius": 1.4,
+    "grid_routes": [
+      [
+        [
+          -4,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          -4,
+          -4
+        ]
+      ],
+      [
+        [
+          -4,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          -4,
+          -4
+        ]
+      ]
+    ]
+  },
+  "vehicle": {
+    "mode": "loop",
+    "speed_mps": 0.2,
+    "max_acceleration_mps2": 0.2,
+    "initial_route_s_m": 0,
+    "grid_route": 0,
+    "shuttle_half_length": 5.5,
+    "shuttle_behavior": "reverse",
+    "stop_duration_s": 2,
+    "turn_duration_s": 4,
+    "body_length_m": 0.6,
+    "body_width_m": 0.44,
+    "wheel_radius_m": 0.075,
+    "wheel_width_m": 0.045,
+    "pad_length_m": 0.5,
+    "pad_width_m": 0.4,
+    "pad_top_height_m": 0.3,
+    "marker_board_side_m": 0.4,
+    "marker_code_side_m": 0.3,
+    "marker_id": 0,
+    "marker_center_vehicle_m": [
+      0.32,
+      0,
+      0.5
+    ],
+    "pad_center_vehicle_m": [
+      -0.05,
+      0,
+      0.3
+    ]
+  },
+  "preview": {
+    "speed_mps": 0.3,
+    "radius_m": 0.1,
+    "start": [
+      8.2,
+      -1.4,
+      0.1
+    ],
+    "waypoints": [
+      [
+        8.2,
+        -1.4,
+        1.25,
+        90,
+        "TAKEOFF"
+      ],
+      [
+        8.2,
+        1.8,
+        1.25,
+        90,
+        "M1"
+      ],
+      [
+        10.8,
+        1.5,
+        1.25,
+        0,
+        "M2"
+      ],
+      [
+        10.5,
+        -1.8,
+        1.25,
+        -90,
+        "M3"
+      ],
+      [
+        7,
+        -1.4,
+        1.25,
+        -180,
+        "EXIT_ALIGN"
+      ],
+      [
+        5.55,
+        -1.4,
+        1.25,
+        -180,
+        "GATE_12"
+      ],
+      [
+        5.0,
+        0.0,
+        1.0,
+        -180,
+        "RING_1_ALIGN"
+      ],
+      [
+        4.6499999999999995,
+        0.0,
+        1.0,
+        -180,
+        "RING_1_APPROACH"
+      ],
+      [
+        3.8,
+        0.0,
+        1.0,
+        -180,
+        "RING_1_PASS"
+      ],
+      [
+        3.1999999999999997,
+        0.0,
+        1.0,
+        -180,
+        "RING_1_CLEAR_RING"
+      ],
+      [
+        3.1999999999999997,
+        0.0,
+        1.0,
+        -180,
+        "RING_1_SCAN_NEXT"
+      ],
+      [
+        1.7999999999999996,
+        0.35,
+        1.5,
+        -180,
+        "RING_2_ALIGN"
+      ],
+      [
+        1.4499999999999997,
+        0.35,
+        1.5,
+        -180,
+        "RING_2_APPROACH"
+      ],
+      [
+        0.5999999999999996,
+        0.35,
+        1.5,
+        -180,
+        "RING_2_PASS"
+      ],
+      [
+        -3.3306690738754696e-16,
+        0.35,
+        1.5,
+        -180,
+        "RING_2_CLEAR_RING"
+      ],
+      [
+        -3.3306690738754696e-16,
+        0.35,
+        1.5,
+        -180,
+        "RING_2_SCAN_NEXT"
+      ],
+      [
+        -1.3999999999999997,
+        -0.35,
+        2.0,
+        -180,
+        "RING_3_ALIGN"
+      ],
+      [
+        -1.7499999999999996,
+        -0.35,
+        2.0,
+        -180,
+        "RING_3_APPROACH"
+      ],
+      [
+        -2.5999999999999996,
+        -0.35,
+        2.0,
+        -180,
+        "RING_3_PASS"
+      ],
+      [
+        -3.1999999999999997,
+        -0.35,
+        2.0,
+        -180,
+        "RING_3_CLEAR_RING"
+      ],
+      [
+        -3.1999999999999997,
+        -0.35,
+        2.0,
+        -180,
+        "RING_3_SCAN_NEXT"
+      ],
+      [
+        -5.1000000000000005,
+        0,
+        1.5,
+        -180,
+        "BLOCK_APPROACH"
+      ],
+      [
+        -6.4,
+        0,
+        1.5,
+        -180,
+        "BLOCK_PASSAGE"
+      ],
+      [
+        -7.0,
+        0,
+        1.5,
+        -180,
+        "BLOCK_SCAN"
+      ],
+      [
+        -9.0,
+        1.5,
+        1.5,
+        -180,
+        "S_NORTH_APPROACH"
+      ],
+      [
+        -10.799999999999999,
+        1.5,
+        1.5,
+        -180,
+        "S_NORTH"
+      ],
+      [
+        -10.799999999999999,
+        1.5,
+        1.5,
+        -180,
+        "S_WALL2_SCAN"
+      ],
+      [
+        -13.8,
+        -1.5,
+        1.5,
+        -180,
+        "S_SOUTH_APPROACH"
+      ],
+      [
+        -15.6,
+        -1.5,
+        1.5,
+        -180,
+        "S_SOUTH"
+      ],
+      [
+        -15.6,
+        -1.5,
+        1.5,
+        -180,
+        "GATE_SCAN"
+      ],
+      [
+        -17,
+        -1.4,
+        1.5,
+        -180,
+        "GATE_23_ALIGN"
+      ],
+      [
+        -18,
+        -1.4,
+        1.5,
+        -180,
+        "GATE_23"
+      ],
+      [
+        -18.65,
+        -1.4,
+        1.5,
+        -180,
+        "STAGE3_ENTRY"
+      ]
+    ],
+    "rendezvous_duration_s": 22,
+    "track_duration_s": 10,
+    "descent_duration_s": 10
+  },
+  "visual": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "sensor_resolution": [
+      324,
+      244
+    ],
+    "fovy": 60,
+    "floor_pixels_per_m": 180,
+    "ambient": 0.45,
+    "diffuse": 0.7,
+    "cameras": {
+      "overview": [
+        [
+          -13,
+          -32,
+          35
+        ],
+        [
+          -13,
+          0,
+          0
+        ]
+      ],
+      "top": [
+        [
+          -13,
+          0,
+          44
+        ],
+        [
+          -13,
+          0,
+          0
+        ]
+      ],
+      "stage1": [
+        [
+          5.5,
+          -5.5,
+          9
+        ],
+        [
+          9,
+          0,
+          0.7
+        ]
+      ],
+      "stage2": [
+        [
+          -6.0,
+          -15,
+          17
+        ],
+        [
+          -6.0,
+          0,
+          0.8
+        ]
+      ],
+      "stage3": [
+        [
+          -28,
+          -23,
+          24
+        ],
+        [
+          -28,
+          0,
+          0
+        ]
+      ],
+      "stage2_top": [
+        [
+          -6.0,
+          0,
+          17
+        ],
+        [
+          -6.0,
+          0,
+          0
+        ]
+      ],
+      "stage3_top": [
+        [
+          -28,
+          0,
+          23
+        ],
+        [
+          -28,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "simulation": {
+    "timestep_s": 0.005,
+    "render_fps": 30
+  },
+  "sensor": {
+    "resolution": [
+      324,
+      244
+    ],
+    "fovy_deg": 70,
+    "mount_body_m": [
+      0.03,
+      0,
+      0
+    ],
+    "fps": 20,
+    "pitch_deg": 0,
+    "optical_frame": "integrated_arena_camera_optical"
+  },
+  "start_pad": {
+    "size_m": 0.6,
+    "surface_z_m": 0.004,
+    "yaw_deg": 90,
+    "rgba": [
+      0.02,
+      0.55,
+      0.65,
+      1
+    ]
+  },
+  "flight_assumptions": {
+    "horizontal_speed_mps": 0.3,
+    "acceleration_mps2": 0.4,
+    "vertical_speed_mps": 0.15,
+    "yaw_rate_degps": 18,
+    "detector_latency_s": 0.15,
+    "confirmation_frames": 5,
+    "stabilization_s": 0.5,
+    "safety_radius_m": 0.2,
+    "minimum_clearance_m": 0.1,
+    "status": "conservative planning assumptions, not certified Crazyflie performance",
+    "lateral_speed_mps": 0.15,
+    "reference": "src/crazyflie_mission1/config/mission1.yaml speed/yaw/height-rate ceilings; acceleration .4 and safety radius .2 remain planning assumptions; Mission1 maximum height1.6 does not support Ring3 at2.0"
+  },
+  "frames": {
+    "stage1_origin": [
+      9,
+      0,
+      0
+    ],
+    "stage2_entry": [
+      6,
+      0,
+      0
+    ],
+    "stage3_origin": [
+      -28,
+      0,
+      0
+    ]
+  },
+  "steering": {
+    "wheelbase_m": 0.44,
+    "track_m": 0.47,
+    "rear_axle_body_x_m": -0.22,
+    "max_front_angle_deg": 35.0,
+    "max_equivalent_angle_deg": 30.0,
+    "max_rate_degps": 45.0,
+    "controller_rate_degps": 25.0,
+    "lookahead_m": 0.55,
+    "integration_dt_s": 0.02,
+    "fidelity": "Level A: steering-constrained kinematics; no tire dynamics"
+  }
+}

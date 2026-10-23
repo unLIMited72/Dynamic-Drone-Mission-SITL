@@ -1,0 +1,136 @@
+diff --git a/gvsoc/dpi-models/models/camera/camera.cpp b/gvsoc/dpi-models/models/camera/camera.cpp
+index 3455e64e..51c8fb49 100644
+--- a/gvsoc/dpi-models/models/camera/camera.cpp
++++ b/gvsoc/dpi-models/models/camera/camera.cpp
+@@ -20,6 +20,9 @@
+ 
+ #include "dpi/models.hpp"
+ #include <stdint.h>
++#include <vector>
++#include <cstdio>
++#include <stdexcept>
+ #ifdef __MAGICK__
+ #include <Magick++.h>
+ #endif
+@@ -84,6 +87,7 @@ private:
+   int current_pixel;
+   int nb_pixel;
+   int color_mode;
++  std::vector<uint8_t> raw_data;
+ };
+ 
+ 
+@@ -393,6 +397,43 @@ void Camera_stream::set_image_size(int width, int height)
+ 
+ bool Camera_stream::fetch_image()
+ {
++  // VIRTUAL_AIDECK_RAW_SUPPORT
++  if (stream_path.size() >= 4 &&
++      stream_path.compare(stream_path.size()-4, 4, ".raw") == 0)
++  {
++    char filename[4096];
++
++    std::snprintf(filename, sizeof(filename),
++                  stream_path.c_str(), frame_index);
++
++    std::FILE *file = std::fopen(filename, "rb");
++
++    if (!file && frame_index > 0)
++    {
++      frame_index = 0;
++      std::snprintf(filename, sizeof(filename),
++                    stream_path.c_str(), frame_index);
++      file = std::fopen(filename, "rb");
++    }
++
++    if (!file)
++      throw std::runtime_error(
++          std::string("RAW camera input not found: ") + filename);
++
++    raw_data.resize(nb_pixel);
++
++    size_t count = std::fread(
++        raw_data.data(), 1, nb_pixel, file);
++
++    std::fclose(file);
++
++    if (count != (size_t)nb_pixel)
++      throw std::runtime_error("RAW camera frame is too short");
++
++    frame_index++;
++    return true;
++  }
++
+   char path[strlen(stream_path.c_str()) + 100];
+   while(1)
+   {
+@@ -435,6 +476,24 @@ bool Camera_stream::fetch_image()
+ 
+ unsigned int Camera_stream::get_pixel()
+ {
++  // RAW grayscale input without GraphicsMagick
++  if (stream_path.size() >= 4 &&
++      stream_path.compare(stream_path.size()-4, 4, ".raw") == 0)
++  {
++    if (raw_data.empty())
++      fetch_image();
++
++    unsigned int pixel = raw_data[current_pixel++];
++
++    if (current_pixel == nb_pixel)
++    {
++      current_pixel = 0;
++      raw_data.clear();
++    }
++
++    return pixel;
++  }
++
+ #ifdef __MAGICK__
+   if (image_buffer == NULL) fetch_image();
+ 
+diff --git a/gvsoc/gvsoc/engine/Makefile b/gvsoc/gvsoc/engine/Makefile
+index ef3cefb8..6025b9f8 100644
+--- a/gvsoc/gvsoc/engine/Makefile
++++ b/gvsoc/gvsoc/engine/Makefile
+@@ -12,6 +12,7 @@ V = @
+ endif
+ 
+ CFLAGS +=  -MMD -MP -O2 -g -fpic -Isrc -std=c++11 -Werror -Wall -I$(INSTALL_DIR)/include
++CFLAGS += -Wno-error=nonnull
+ 
+ LDFLAGS += -O2 -g -Werror -Wall -lz -L$(INSTALL_DIR)/lib -Wl,--whole-archive -ljson -Wl,--no-whole-archive
+ 
+diff --git a/gvsoc/gvsoc/models/utils/dpi_wrapper_impl.cpp b/gvsoc/gvsoc/models/utils/dpi_wrapper_impl.cpp
+index eab4d9e5..b65ca834 100644
+--- a/gvsoc/gvsoc/models/utils/dpi_wrapper_impl.cpp
++++ b/gvsoc/gvsoc/models/utils/dpi_wrapper_impl.cpp
+@@ -34,6 +34,7 @@
+ #include <vector>
+ #include <thread>
+ #include <unistd.h>
++#include <sched.h>
+ #include <ucontext.h>
+ 
+ 
+@@ -312,7 +313,7 @@ void dpi_wrapper::raise_event()
+ void dpi_wrapper::raise_event_from_ext()
+ {
+   while(this->get_clock() == NULL)
+-    pthread_yield();
++    sched_yield();
+ 
+   this->get_clock()->get_engine()->lock();
+   if (!this->wakeup_evt->is_enqueued())
+diff --git a/gvsoc/gvsoc/vp_models.mk b/gvsoc/gvsoc/vp_models.mk
+index ac039235..a9c11841 100644
+--- a/gvsoc/gvsoc/vp_models.mk
++++ b/gvsoc/gvsoc/vp_models.mk
+@@ -29,6 +29,7 @@ VP_COMP_DBG_LDFLAGS=-lpulpvp-debug
+ VP_COMP_SV_LDFLAGS=-lpulpvp-sv
+ 
+ VP_COMP_CFLAGS += -Werror -Wfatal-errors
++VP_COMP_CFLAGS += -Wno-error=nonnull
+ VP_COMP_LDFLAGS += -Werror -Wfatal-errors
+ 
+ ifdef VP_USE_SYSTEMV

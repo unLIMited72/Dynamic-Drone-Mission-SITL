@@ -1,0 +1,16 @@
+/Drone/
+/crazyflie-firmware/
+/crazyflie-lib-python/
+/third_party/
+/.local/
+/cache/
+/virtual_aideck/runtime/build/
+/virtual_aideck/runtime/gap8/BUILD/
+/virtual_aideck/runtime_logs/
+/virtual_aideck/runtime_state/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+*.swp

@@ -1,0 +1,1281 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="platform_v2_integrated_arena_INTEGRATED_ARENA_V1.2_M3_PAD_50X40">
+  <compiler angle="radian" />
+  <option timestep="0.005" gravity="0 0 -9.81" />
+  <default>
+    <geom friction=".8 .01 .001" solref=".01 1" material="matte" />
+  </default>
+  <visual>
+    <global offwidth="1280" offheight="720" />
+    <map znear="0.001" zfar="100" />
+  </visual>
+  <asset>
+    <material name="matte" specular="0" shininess="0" reflectance="0" />
+    <texture name="floor_tex" type="2d" file="assets/floor.png" />
+    <material name="floor_mat" texture="floor_tex" texuniform="false" texrepeat="1 1" reflectance="0" specular="0" shininess="0" />
+    <texture name="aruco_id0_tex" type="2d" file="assets/id0.png" />
+    <material name="aruco_id0_mat" texture="aruco_id0_tex" texuniform="false" texrepeat="1 1" specular="0" shininess="0" reflectance="0" />
+    <texture name="aruco_id1_tex" type="2d" file="assets/id1.png" />
+    <material name="aruco_id1_mat" texture="aruco_id1_tex" texuniform="false" texrepeat="1 1" specular="0" shininess="0" reflectance="0" />
+    <texture name="aruco_id2_tex" type="2d" file="assets/id2.png" />
+    <material name="aruco_id2_mat" texture="aruco_id2_tex" texuniform="false" texrepeat="1 1" specular="0" shininess="0" reflectance="0" />
+    <texture name="aruco_id3_tex" type="2d" file="assets/id3.png" />
+    <material name="aruco_id3_mat" texture="aruco_id3_tex" texuniform="false" texrepeat="1 1" specular="0" shininess="0" reflectance="0" />
+    <texture name="start_tex" type="2d" file="assets/start_pad.png" />
+    <material name="start_mat" texture="start_tex" texuniform="false" specular="0" shininess="0" reflectance="0" />
+    <texture name="m3_road_tex" type="2d" file="assets/m3_road.png" />
+    <material name="m3_road_mat" texture="m3_road_tex" texuniform="false" texrepeat="1 1" specular="0" shininess="0" reflectance="0" />
+  </asset>
+  <worldbody>
+    <light pos="-4 0 12" dir="0 0 -1" directional="true" ambient="0.45 0.45 0.45" diffuse="0.7 0.7 0.7" specular="0 0 0" castshadow="false" />
+    <geom name="arena_floor" type="plane" pos="-10.5 0 0" size="22.5 3 0.05" material="floor_mat" />
+    <geom name="fence_0_north_v0" type="capsule" fromto="6 3 0 6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v1" type="capsule" fromto="6.2 3 0 6.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v2" type="capsule" fromto="6.4 3 0 6.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v3" type="capsule" fromto="6.6 3 0 6.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v4" type="capsule" fromto="6.8 3 0 6.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v5" type="capsule" fromto="7 3 0 7 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v6" type="capsule" fromto="7.2 3 0 7.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v7" type="capsule" fromto="7.4 3 0 7.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v8" type="capsule" fromto="7.6 3 0 7.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v9" type="capsule" fromto="7.8 3 0 7.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v10" type="capsule" fromto="8 3 0 8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v11" type="capsule" fromto="8.2 3 0 8.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v12" type="capsule" fromto="8.4 3 0 8.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v13" type="capsule" fromto="8.6 3 0 8.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v14" type="capsule" fromto="8.8 3 0 8.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v15" type="capsule" fromto="9 3 0 9 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v16" type="capsule" fromto="9.2 3 0 9.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v17" type="capsule" fromto="9.4 3 0 9.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v18" type="capsule" fromto="9.6 3 0 9.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v19" type="capsule" fromto="9.8 3 0 9.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v20" type="capsule" fromto="10 3 0 10 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v21" type="capsule" fromto="10.2 3 0 10.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v22" type="capsule" fromto="10.4 3 0 10.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v23" type="capsule" fromto="10.6 3 0 10.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v24" type="capsule" fromto="10.8 3 0 10.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v25" type="capsule" fromto="11 3 0 11 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v26" type="capsule" fromto="11.2 3 0 11.2 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v27" type="capsule" fromto="11.4 3 0 11.4 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v28" type="capsule" fromto="11.6 3 0 11.6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v29" type="capsule" fromto="11.8 3 0 11.8 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_v30" type="capsule" fromto="12 3 0 12 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h0" type="capsule" fromto="6 3 0.2 12 3 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h1" type="capsule" fromto="6 3 0.4 12 3 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h2" type="capsule" fromto="6 3 0.6 12 3 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h3" type="capsule" fromto="6 3 0.8 12 3 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h4" type="capsule" fromto="6 3 1 12 3 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h5" type="capsule" fromto="6 3 1.2 12 3 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h6" type="capsule" fromto="6 3 1.4 12 3 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h7" type="capsule" fromto="6 3 1.6 12 3 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h8" type="capsule" fromto="6 3 1.8 12 3 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h9" type="capsule" fromto="6 3 2 12 3 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h10" type="capsule" fromto="6 3 2.2 12 3 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h11" type="capsule" fromto="6 3 2.4 12 3 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h12" type="capsule" fromto="6 3 2.6 12 3 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_h13" type="capsule" fromto="6 3 2.8 12 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_post0" type="capsule" fromto="6 3 0 6 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_post1" type="capsule" fromto="8 3 0 8 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_post2" type="capsule" fromto="10 3 0 10 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_post3" type="capsule" fromto="12 3 0 12 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_rail" type="capsule" fromto="6 3 2.8 12 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_north_collision" type="box" pos="9 3 1.4" size="3 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="fence_0_south_v0" type="capsule" fromto="6 -3 0 6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v1" type="capsule" fromto="6.2 -3 0 6.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v2" type="capsule" fromto="6.4 -3 0 6.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v3" type="capsule" fromto="6.6 -3 0 6.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v4" type="capsule" fromto="6.8 -3 0 6.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v5" type="capsule" fromto="7 -3 0 7 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v6" type="capsule" fromto="7.2 -3 0 7.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v7" type="capsule" fromto="7.4 -3 0 7.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v8" type="capsule" fromto="7.6 -3 0 7.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v9" type="capsule" fromto="7.8 -3 0 7.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v10" type="capsule" fromto="8 -3 0 8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v11" type="capsule" fromto="8.2 -3 0 8.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v12" type="capsule" fromto="8.4 -3 0 8.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v13" type="capsule" fromto="8.6 -3 0 8.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v14" type="capsule" fromto="8.8 -3 0 8.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v15" type="capsule" fromto="9 -3 0 9 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v16" type="capsule" fromto="9.2 -3 0 9.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v17" type="capsule" fromto="9.4 -3 0 9.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v18" type="capsule" fromto="9.6 -3 0 9.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v19" type="capsule" fromto="9.8 -3 0 9.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v20" type="capsule" fromto="10 -3 0 10 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v21" type="capsule" fromto="10.2 -3 0 10.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v22" type="capsule" fromto="10.4 -3 0 10.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v23" type="capsule" fromto="10.6 -3 0 10.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v24" type="capsule" fromto="10.8 -3 0 10.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v25" type="capsule" fromto="11 -3 0 11 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v26" type="capsule" fromto="11.2 -3 0 11.2 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v27" type="capsule" fromto="11.4 -3 0 11.4 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v28" type="capsule" fromto="11.6 -3 0 11.6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v29" type="capsule" fromto="11.8 -3 0 11.8 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_v30" type="capsule" fromto="12 -3 0 12 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h0" type="capsule" fromto="6 -3 0.2 12 -3 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h1" type="capsule" fromto="6 -3 0.4 12 -3 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h2" type="capsule" fromto="6 -3 0.6 12 -3 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h3" type="capsule" fromto="6 -3 0.8 12 -3 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h4" type="capsule" fromto="6 -3 1 12 -3 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h5" type="capsule" fromto="6 -3 1.2 12 -3 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h6" type="capsule" fromto="6 -3 1.4 12 -3 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h7" type="capsule" fromto="6 -3 1.6 12 -3 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h8" type="capsule" fromto="6 -3 1.8 12 -3 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h9" type="capsule" fromto="6 -3 2 12 -3 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h10" type="capsule" fromto="6 -3 2.2 12 -3 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h11" type="capsule" fromto="6 -3 2.4 12 -3 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h12" type="capsule" fromto="6 -3 2.6 12 -3 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_h13" type="capsule" fromto="6 -3 2.8 12 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_post0" type="capsule" fromto="6 -3 0 6 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_post1" type="capsule" fromto="8 -3 0 8 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_post2" type="capsule" fromto="10 -3 0 10 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_post3" type="capsule" fromto="12 -3 0 12 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_rail" type="capsule" fromto="6 -3 2.8 12 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_0_south_collision" type="box" pos="9 -3 1.4" size="3 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="fence_1_north_v0" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v1" type="capsule" fromto="-17.8 2.5 0 -17.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v2" type="capsule" fromto="-17.6 2.5 0 -17.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v3" type="capsule" fromto="-17.4 2.5 0 -17.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v4" type="capsule" fromto="-17.2 2.5 0 -17.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v5" type="capsule" fromto="-17 2.5 0 -17 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v6" type="capsule" fromto="-16.8 2.5 0 -16.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v7" type="capsule" fromto="-16.6 2.5 0 -16.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v8" type="capsule" fromto="-16.4 2.5 0 -16.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v9" type="capsule" fromto="-16.2 2.5 0 -16.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v10" type="capsule" fromto="-16 2.5 0 -16 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v11" type="capsule" fromto="-15.8 2.5 0 -15.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v12" type="capsule" fromto="-15.6 2.5 0 -15.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v13" type="capsule" fromto="-15.4 2.5 0 -15.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v14" type="capsule" fromto="-15.2 2.5 0 -15.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v15" type="capsule" fromto="-15 2.5 0 -15 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v16" type="capsule" fromto="-14.8 2.5 0 -14.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v17" type="capsule" fromto="-14.6 2.5 0 -14.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v18" type="capsule" fromto="-14.4 2.5 0 -14.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v19" type="capsule" fromto="-14.2 2.5 0 -14.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v20" type="capsule" fromto="-14 2.5 0 -14 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v21" type="capsule" fromto="-13.8 2.5 0 -13.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v22" type="capsule" fromto="-13.6 2.5 0 -13.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v23" type="capsule" fromto="-13.4 2.5 0 -13.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v24" type="capsule" fromto="-13.2 2.5 0 -13.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v25" type="capsule" fromto="-13 2.5 0 -13 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v26" type="capsule" fromto="-12.8 2.5 0 -12.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v27" type="capsule" fromto="-12.6 2.5 0 -12.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v28" type="capsule" fromto="-12.4 2.5 0 -12.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v29" type="capsule" fromto="-12.2 2.5 0 -12.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v30" type="capsule" fromto="-12 2.5 0 -12 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v31" type="capsule" fromto="-11.8 2.5 0 -11.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v32" type="capsule" fromto="-11.6 2.5 0 -11.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v33" type="capsule" fromto="-11.4 2.5 0 -11.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v34" type="capsule" fromto="-11.2 2.5 0 -11.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v35" type="capsule" fromto="-11 2.5 0 -11 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v36" type="capsule" fromto="-10.8 2.5 0 -10.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v37" type="capsule" fromto="-10.6 2.5 0 -10.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v38" type="capsule" fromto="-10.4 2.5 0 -10.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v39" type="capsule" fromto="-10.2 2.5 0 -10.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v40" type="capsule" fromto="-10 2.5 0 -10 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v41" type="capsule" fromto="-9.8 2.5 0 -9.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v42" type="capsule" fromto="-9.6 2.5 0 -9.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v43" type="capsule" fromto="-9.4 2.5 0 -9.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v44" type="capsule" fromto="-9.2 2.5 0 -9.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v45" type="capsule" fromto="-9 2.5 0 -9 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v46" type="capsule" fromto="-8.8 2.5 0 -8.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v47" type="capsule" fromto="-8.6 2.5 0 -8.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v48" type="capsule" fromto="-8.4 2.5 0 -8.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v49" type="capsule" fromto="-8.2 2.5 0 -8.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v50" type="capsule" fromto="-8 2.5 0 -8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v51" type="capsule" fromto="-7.8 2.5 0 -7.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v52" type="capsule" fromto="-7.6 2.5 0 -7.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v53" type="capsule" fromto="-7.4 2.5 0 -7.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v54" type="capsule" fromto="-7.2 2.5 0 -7.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v55" type="capsule" fromto="-7 2.5 0 -7 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v56" type="capsule" fromto="-6.8 2.5 0 -6.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v57" type="capsule" fromto="-6.6 2.5 0 -6.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v58" type="capsule" fromto="-6.4 2.5 0 -6.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v59" type="capsule" fromto="-6.2 2.5 0 -6.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v60" type="capsule" fromto="-6 2.5 0 -6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v61" type="capsule" fromto="-5.8 2.5 0 -5.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v62" type="capsule" fromto="-5.6 2.5 0 -5.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v63" type="capsule" fromto="-5.4 2.5 0 -5.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v64" type="capsule" fromto="-5.2 2.5 0 -5.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v65" type="capsule" fromto="-5 2.5 0 -5 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v66" type="capsule" fromto="-4.8 2.5 0 -4.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v67" type="capsule" fromto="-4.6 2.5 0 -4.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v68" type="capsule" fromto="-4.4 2.5 0 -4.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v69" type="capsule" fromto="-4.2 2.5 0 -4.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v70" type="capsule" fromto="-4 2.5 0 -4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v71" type="capsule" fromto="-3.8 2.5 0 -3.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v72" type="capsule" fromto="-3.6 2.5 0 -3.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v73" type="capsule" fromto="-3.4 2.5 0 -3.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v74" type="capsule" fromto="-3.2 2.5 0 -3.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v75" type="capsule" fromto="-3 2.5 0 -3 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v76" type="capsule" fromto="-2.8 2.5 0 -2.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v77" type="capsule" fromto="-2.6 2.5 0 -2.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v78" type="capsule" fromto="-2.4 2.5 0 -2.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v79" type="capsule" fromto="-2.2 2.5 0 -2.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v80" type="capsule" fromto="-2 2.5 0 -2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v81" type="capsule" fromto="-1.8 2.5 0 -1.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v82" type="capsule" fromto="-1.6 2.5 0 -1.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v83" type="capsule" fromto="-1.4 2.5 0 -1.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v84" type="capsule" fromto="-1.2 2.5 0 -1.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v85" type="capsule" fromto="-1 2.5 0 -1 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v86" type="capsule" fromto="-0.8 2.5 0 -0.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v87" type="capsule" fromto="-0.6 2.5 0 -0.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v88" type="capsule" fromto="-0.4 2.5 0 -0.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v89" type="capsule" fromto="-0.2 2.5 0 -0.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v90" type="capsule" fromto="0 2.5 0 0 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v91" type="capsule" fromto="0.2 2.5 0 0.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v92" type="capsule" fromto="0.4 2.5 0 0.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v93" type="capsule" fromto="0.6 2.5 0 0.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v94" type="capsule" fromto="0.8 2.5 0 0.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v95" type="capsule" fromto="1 2.5 0 1 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v96" type="capsule" fromto="1.2 2.5 0 1.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v97" type="capsule" fromto="1.4 2.5 0 1.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v98" type="capsule" fromto="1.6 2.5 0 1.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v99" type="capsule" fromto="1.8 2.5 0 1.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v100" type="capsule" fromto="2 2.5 0 2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v101" type="capsule" fromto="2.2 2.5 0 2.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v102" type="capsule" fromto="2.4 2.5 0 2.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v103" type="capsule" fromto="2.6 2.5 0 2.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v104" type="capsule" fromto="2.8 2.5 0 2.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v105" type="capsule" fromto="3 2.5 0 3 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v106" type="capsule" fromto="3.2 2.5 0 3.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v107" type="capsule" fromto="3.4 2.5 0 3.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v108" type="capsule" fromto="3.6 2.5 0 3.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v109" type="capsule" fromto="3.8 2.5 0 3.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v110" type="capsule" fromto="4 2.5 0 4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v111" type="capsule" fromto="4.2 2.5 0 4.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v112" type="capsule" fromto="4.4 2.5 0 4.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v113" type="capsule" fromto="4.6 2.5 0 4.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v114" type="capsule" fromto="4.8 2.5 0 4.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v115" type="capsule" fromto="5 2.5 0 5 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v116" type="capsule" fromto="5.2 2.5 0 5.2 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v117" type="capsule" fromto="5.4 2.5 0 5.4 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v118" type="capsule" fromto="5.6 2.5 0 5.6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v119" type="capsule" fromto="5.8 2.5 0 5.8 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_v120" type="capsule" fromto="6 2.5 0 6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h0" type="capsule" fromto="-18 2.5 0.2 6 2.5 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h1" type="capsule" fromto="-18 2.5 0.4 6 2.5 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h2" type="capsule" fromto="-18 2.5 0.6 6 2.5 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h3" type="capsule" fromto="-18 2.5 0.8 6 2.5 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h4" type="capsule" fromto="-18 2.5 1 6 2.5 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h5" type="capsule" fromto="-18 2.5 1.2 6 2.5 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h6" type="capsule" fromto="-18 2.5 1.4 6 2.5 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h7" type="capsule" fromto="-18 2.5 1.6 6 2.5 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h8" type="capsule" fromto="-18 2.5 1.8 6 2.5 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h9" type="capsule" fromto="-18 2.5 2 6 2.5 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h10" type="capsule" fromto="-18 2.5 2.2 6 2.5 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h11" type="capsule" fromto="-18 2.5 2.4 6 2.5 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h12" type="capsule" fromto="-18 2.5 2.6 6 2.5 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_h13" type="capsule" fromto="-18 2.5 2.8 6 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post0" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post1" type="capsule" fromto="-15.6 2.5 0 -15.6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post2" type="capsule" fromto="-13.2 2.5 0 -13.2 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post3" type="capsule" fromto="-10.8 2.5 0 -10.8 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post4" type="capsule" fromto="-8.4 2.5 0 -8.4 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post5" type="capsule" fromto="-6 2.5 0 -6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post6" type="capsule" fromto="-3.6 2.5 0 -3.6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post7" type="capsule" fromto="-1.2 2.5 0 -1.2 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post8" type="capsule" fromto="1.2 2.5 0 1.2 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post9" type="capsule" fromto="3.6 2.5 0 3.6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_post10" type="capsule" fromto="6 2.5 0 6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_rail" type="capsule" fromto="-18 2.5 2.8 6 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_north_collision" type="box" pos="-6 2.5 1.4" size="12 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="fence_1_south_v0" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v1" type="capsule" fromto="-17.8 -2.5 0 -17.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v2" type="capsule" fromto="-17.6 -2.5 0 -17.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v3" type="capsule" fromto="-17.4 -2.5 0 -17.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v4" type="capsule" fromto="-17.2 -2.5 0 -17.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v5" type="capsule" fromto="-17 -2.5 0 -17 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v6" type="capsule" fromto="-16.8 -2.5 0 -16.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v7" type="capsule" fromto="-16.6 -2.5 0 -16.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v8" type="capsule" fromto="-16.4 -2.5 0 -16.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v9" type="capsule" fromto="-16.2 -2.5 0 -16.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v10" type="capsule" fromto="-16 -2.5 0 -16 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v11" type="capsule" fromto="-15.8 -2.5 0 -15.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v12" type="capsule" fromto="-15.6 -2.5 0 -15.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v13" type="capsule" fromto="-15.4 -2.5 0 -15.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v14" type="capsule" fromto="-15.2 -2.5 0 -15.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v15" type="capsule" fromto="-15 -2.5 0 -15 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v16" type="capsule" fromto="-14.8 -2.5 0 -14.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v17" type="capsule" fromto="-14.6 -2.5 0 -14.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v18" type="capsule" fromto="-14.4 -2.5 0 -14.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v19" type="capsule" fromto="-14.2 -2.5 0 -14.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v20" type="capsule" fromto="-14 -2.5 0 -14 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v21" type="capsule" fromto="-13.8 -2.5 0 -13.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v22" type="capsule" fromto="-13.6 -2.5 0 -13.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v23" type="capsule" fromto="-13.4 -2.5 0 -13.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v24" type="capsule" fromto="-13.2 -2.5 0 -13.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v25" type="capsule" fromto="-13 -2.5 0 -13 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v26" type="capsule" fromto="-12.8 -2.5 0 -12.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v27" type="capsule" fromto="-12.6 -2.5 0 -12.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v28" type="capsule" fromto="-12.4 -2.5 0 -12.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v29" type="capsule" fromto="-12.2 -2.5 0 -12.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v30" type="capsule" fromto="-12 -2.5 0 -12 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v31" type="capsule" fromto="-11.8 -2.5 0 -11.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v32" type="capsule" fromto="-11.6 -2.5 0 -11.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v33" type="capsule" fromto="-11.4 -2.5 0 -11.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v34" type="capsule" fromto="-11.2 -2.5 0 -11.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v35" type="capsule" fromto="-11 -2.5 0 -11 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v36" type="capsule" fromto="-10.8 -2.5 0 -10.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v37" type="capsule" fromto="-10.6 -2.5 0 -10.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v38" type="capsule" fromto="-10.4 -2.5 0 -10.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v39" type="capsule" fromto="-10.2 -2.5 0 -10.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v40" type="capsule" fromto="-10 -2.5 0 -10 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v41" type="capsule" fromto="-9.8 -2.5 0 -9.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v42" type="capsule" fromto="-9.6 -2.5 0 -9.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v43" type="capsule" fromto="-9.4 -2.5 0 -9.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v44" type="capsule" fromto="-9.2 -2.5 0 -9.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v45" type="capsule" fromto="-9 -2.5 0 -9 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v46" type="capsule" fromto="-8.8 -2.5 0 -8.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v47" type="capsule" fromto="-8.6 -2.5 0 -8.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v48" type="capsule" fromto="-8.4 -2.5 0 -8.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v49" type="capsule" fromto="-8.2 -2.5 0 -8.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v50" type="capsule" fromto="-8 -2.5 0 -8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v51" type="capsule" fromto="-7.8 -2.5 0 -7.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v52" type="capsule" fromto="-7.6 -2.5 0 -7.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v53" type="capsule" fromto="-7.4 -2.5 0 -7.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v54" type="capsule" fromto="-7.2 -2.5 0 -7.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v55" type="capsule" fromto="-7 -2.5 0 -7 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v56" type="capsule" fromto="-6.8 -2.5 0 -6.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v57" type="capsule" fromto="-6.6 -2.5 0 -6.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v58" type="capsule" fromto="-6.4 -2.5 0 -6.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v59" type="capsule" fromto="-6.2 -2.5 0 -6.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v60" type="capsule" fromto="-6 -2.5 0 -6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v61" type="capsule" fromto="-5.8 -2.5 0 -5.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v62" type="capsule" fromto="-5.6 -2.5 0 -5.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v63" type="capsule" fromto="-5.4 -2.5 0 -5.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v64" type="capsule" fromto="-5.2 -2.5 0 -5.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v65" type="capsule" fromto="-5 -2.5 0 -5 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v66" type="capsule" fromto="-4.8 -2.5 0 -4.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v67" type="capsule" fromto="-4.6 -2.5 0 -4.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v68" type="capsule" fromto="-4.4 -2.5 0 -4.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v69" type="capsule" fromto="-4.2 -2.5 0 -4.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v70" type="capsule" fromto="-4 -2.5 0 -4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v71" type="capsule" fromto="-3.8 -2.5 0 -3.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v72" type="capsule" fromto="-3.6 -2.5 0 -3.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v73" type="capsule" fromto="-3.4 -2.5 0 -3.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v74" type="capsule" fromto="-3.2 -2.5 0 -3.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v75" type="capsule" fromto="-3 -2.5 0 -3 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v76" type="capsule" fromto="-2.8 -2.5 0 -2.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v77" type="capsule" fromto="-2.6 -2.5 0 -2.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v78" type="capsule" fromto="-2.4 -2.5 0 -2.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v79" type="capsule" fromto="-2.2 -2.5 0 -2.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v80" type="capsule" fromto="-2 -2.5 0 -2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v81" type="capsule" fromto="-1.8 -2.5 0 -1.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v82" type="capsule" fromto="-1.6 -2.5 0 -1.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v83" type="capsule" fromto="-1.4 -2.5 0 -1.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v84" type="capsule" fromto="-1.2 -2.5 0 -1.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v85" type="capsule" fromto="-1 -2.5 0 -1 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v86" type="capsule" fromto="-0.8 -2.5 0 -0.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v87" type="capsule" fromto="-0.6 -2.5 0 -0.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v88" type="capsule" fromto="-0.4 -2.5 0 -0.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v89" type="capsule" fromto="-0.2 -2.5 0 -0.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v90" type="capsule" fromto="0 -2.5 0 0 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v91" type="capsule" fromto="0.2 -2.5 0 0.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v92" type="capsule" fromto="0.4 -2.5 0 0.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v93" type="capsule" fromto="0.6 -2.5 0 0.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v94" type="capsule" fromto="0.8 -2.5 0 0.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v95" type="capsule" fromto="1 -2.5 0 1 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v96" type="capsule" fromto="1.2 -2.5 0 1.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v97" type="capsule" fromto="1.4 -2.5 0 1.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v98" type="capsule" fromto="1.6 -2.5 0 1.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v99" type="capsule" fromto="1.8 -2.5 0 1.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v100" type="capsule" fromto="2 -2.5 0 2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v101" type="capsule" fromto="2.2 -2.5 0 2.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v102" type="capsule" fromto="2.4 -2.5 0 2.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v103" type="capsule" fromto="2.6 -2.5 0 2.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v104" type="capsule" fromto="2.8 -2.5 0 2.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v105" type="capsule" fromto="3 -2.5 0 3 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v106" type="capsule" fromto="3.2 -2.5 0 3.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v107" type="capsule" fromto="3.4 -2.5 0 3.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v108" type="capsule" fromto="3.6 -2.5 0 3.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v109" type="capsule" fromto="3.8 -2.5 0 3.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v110" type="capsule" fromto="4 -2.5 0 4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v111" type="capsule" fromto="4.2 -2.5 0 4.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v112" type="capsule" fromto="4.4 -2.5 0 4.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v113" type="capsule" fromto="4.6 -2.5 0 4.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v114" type="capsule" fromto="4.8 -2.5 0 4.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v115" type="capsule" fromto="5 -2.5 0 5 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v116" type="capsule" fromto="5.2 -2.5 0 5.2 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v117" type="capsule" fromto="5.4 -2.5 0 5.4 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v118" type="capsule" fromto="5.6 -2.5 0 5.6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v119" type="capsule" fromto="5.8 -2.5 0 5.8 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_v120" type="capsule" fromto="6 -2.5 0 6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h0" type="capsule" fromto="-18 -2.5 0.2 6 -2.5 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h1" type="capsule" fromto="-18 -2.5 0.4 6 -2.5 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h2" type="capsule" fromto="-18 -2.5 0.6 6 -2.5 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h3" type="capsule" fromto="-18 -2.5 0.8 6 -2.5 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h4" type="capsule" fromto="-18 -2.5 1 6 -2.5 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h5" type="capsule" fromto="-18 -2.5 1.2 6 -2.5 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h6" type="capsule" fromto="-18 -2.5 1.4 6 -2.5 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h7" type="capsule" fromto="-18 -2.5 1.6 6 -2.5 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h8" type="capsule" fromto="-18 -2.5 1.8 6 -2.5 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h9" type="capsule" fromto="-18 -2.5 2 6 -2.5 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h10" type="capsule" fromto="-18 -2.5 2.2 6 -2.5 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h11" type="capsule" fromto="-18 -2.5 2.4 6 -2.5 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h12" type="capsule" fromto="-18 -2.5 2.6 6 -2.5 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_h13" type="capsule" fromto="-18 -2.5 2.8 6 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post0" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post1" type="capsule" fromto="-15.6 -2.5 0 -15.6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post2" type="capsule" fromto="-13.2 -2.5 0 -13.2 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post3" type="capsule" fromto="-10.8 -2.5 0 -10.8 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post4" type="capsule" fromto="-8.4 -2.5 0 -8.4 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post5" type="capsule" fromto="-6 -2.5 0 -6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post6" type="capsule" fromto="-3.6 -2.5 0 -3.6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post7" type="capsule" fromto="-1.2 -2.5 0 -1.2 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post8" type="capsule" fromto="1.2 -2.5 0 1.2 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post9" type="capsule" fromto="3.6 -2.5 0 3.6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_post10" type="capsule" fromto="6 -2.5 0 6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_rail" type="capsule" fromto="-18 -2.5 2.8 6 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_1_south_collision" type="box" pos="-6 -2.5 1.4" size="12 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="fence_east_v0" type="capsule" fromto="12 -3 0 12 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v1" type="capsule" fromto="12 -2.8 0 12 -2.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v2" type="capsule" fromto="12 -2.6 0 12 -2.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v3" type="capsule" fromto="12 -2.4 0 12 -2.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v4" type="capsule" fromto="12 -2.2 0 12 -2.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v5" type="capsule" fromto="12 -2 0 12 -2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v6" type="capsule" fromto="12 -1.8 0 12 -1.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v7" type="capsule" fromto="12 -1.6 0 12 -1.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v8" type="capsule" fromto="12 -1.4 0 12 -1.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v9" type="capsule" fromto="12 -1.2 0 12 -1.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v10" type="capsule" fromto="12 -1 0 12 -1 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v11" type="capsule" fromto="12 -0.8 0 12 -0.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v12" type="capsule" fromto="12 -0.6 0 12 -0.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v13" type="capsule" fromto="12 -0.4 0 12 -0.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v14" type="capsule" fromto="12 -0.2 0 12 -0.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v15" type="capsule" fromto="12 0 0 12 0 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v16" type="capsule" fromto="12 0.2 0 12 0.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v17" type="capsule" fromto="12 0.4 0 12 0.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v18" type="capsule" fromto="12 0.6 0 12 0.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v19" type="capsule" fromto="12 0.8 0 12 0.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v20" type="capsule" fromto="12 1 0 12 1 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v21" type="capsule" fromto="12 1.2 0 12 1.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v22" type="capsule" fromto="12 1.4 0 12 1.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v23" type="capsule" fromto="12 1.6 0 12 1.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v24" type="capsule" fromto="12 1.8 0 12 1.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v25" type="capsule" fromto="12 2 0 12 2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v26" type="capsule" fromto="12 2.2 0 12 2.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v27" type="capsule" fromto="12 2.4 0 12 2.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v28" type="capsule" fromto="12 2.6 0 12 2.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v29" type="capsule" fromto="12 2.8 0 12 2.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_v30" type="capsule" fromto="12 3 0 12 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h0" type="capsule" fromto="12 -3 0.2 12 3 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h1" type="capsule" fromto="12 -3 0.4 12 3 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h2" type="capsule" fromto="12 -3 0.6 12 3 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h3" type="capsule" fromto="12 -3 0.8 12 3 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h4" type="capsule" fromto="12 -3 1 12 3 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h5" type="capsule" fromto="12 -3 1.2 12 3 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h6" type="capsule" fromto="12 -3 1.4 12 3 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h7" type="capsule" fromto="12 -3 1.6 12 3 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h8" type="capsule" fromto="12 -3 1.8 12 3 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h9" type="capsule" fromto="12 -3 2 12 3 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h10" type="capsule" fromto="12 -3 2.2 12 3 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h11" type="capsule" fromto="12 -3 2.4 12 3 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h12" type="capsule" fromto="12 -3 2.6 12 3 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_h13" type="capsule" fromto="12 -3 2.8 12 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_post0" type="capsule" fromto="12 -3 0 12 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_post1" type="capsule" fromto="12 -1 0 12 -1 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_post2" type="capsule" fromto="12 1 0 12 1 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_post3" type="capsule" fromto="12 3 0 12 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_rail" type="capsule" fromto="12 -3 2.8 12 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="fence_east_collision" type="box" pos="12 0 1.4" size="0.018 3 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="gate12_south_v0" type="capsule" fromto="6 -3 0 6 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_v1" type="capsule" fromto="6 -2.83 0 6 -2.83 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_v2" type="capsule" fromto="6 -2.66 0 6 -2.66 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_v3" type="capsule" fromto="6 -2.49 0 6 -2.49 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_v4" type="capsule" fromto="6 -2.32 0 6 -2.32 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_v5" type="capsule" fromto="6 -2.15 0 6 -2.15 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h0" type="capsule" fromto="6 -3 0.2 6 -2.15 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h1" type="capsule" fromto="6 -3 0.4 6 -2.15 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h2" type="capsule" fromto="6 -3 0.6 6 -2.15 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h3" type="capsule" fromto="6 -3 0.8 6 -2.15 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h4" type="capsule" fromto="6 -3 1 6 -2.15 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h5" type="capsule" fromto="6 -3 1.2 6 -2.15 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h6" type="capsule" fromto="6 -3 1.4 6 -2.15 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h7" type="capsule" fromto="6 -3 1.6 6 -2.15 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h8" type="capsule" fromto="6 -3 1.8 6 -2.15 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h9" type="capsule" fromto="6 -3 2 6 -2.15 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h10" type="capsule" fromto="6 -3 2.2 6 -2.15 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h11" type="capsule" fromto="6 -3 2.4 6 -2.15 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h12" type="capsule" fromto="6 -3 2.6 6 -2.15 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_h13" type="capsule" fromto="6 -3 2.8 6 -2.15 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_post0" type="capsule" fromto="6 -3 0 6 -3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_post1" type="capsule" fromto="6 -2.15 0 6 -2.15 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_rail" type="capsule" fromto="6 -3 2.8 6 -2.15 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_south_collision" type="box" pos="6 -2.575 1.4" size="0.018 0.425 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="gate12_north_v0" type="capsule" fromto="6 -0.65 0 6 -0.65 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v1" type="capsule" fromto="6 -0.457894737 0 6 -0.457894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v2" type="capsule" fromto="6 -0.265789474 0 6 -0.265789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v3" type="capsule" fromto="6 -0.0736842105 0 6 -0.0736842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v4" type="capsule" fromto="6 0.118421053 0 6 0.118421053 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v5" type="capsule" fromto="6 0.310526316 0 6 0.310526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v6" type="capsule" fromto="6 0.502631579 0 6 0.502631579 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v7" type="capsule" fromto="6 0.694736842 0 6 0.694736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v8" type="capsule" fromto="6 0.886842105 0 6 0.886842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v9" type="capsule" fromto="6 1.07894737 0 6 1.07894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v10" type="capsule" fromto="6 1.27105263 0 6 1.27105263 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v11" type="capsule" fromto="6 1.46315789 0 6 1.46315789 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v12" type="capsule" fromto="6 1.65526316 0 6 1.65526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v13" type="capsule" fromto="6 1.84736842 0 6 1.84736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v14" type="capsule" fromto="6 2.03947368 0 6 2.03947368 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v15" type="capsule" fromto="6 2.23157895 0 6 2.23157895 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v16" type="capsule" fromto="6 2.42368421 0 6 2.42368421 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v17" type="capsule" fromto="6 2.61578947 0 6 2.61578947 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v18" type="capsule" fromto="6 2.80789474 0 6 2.80789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_v19" type="capsule" fromto="6 3 0 6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h0" type="capsule" fromto="6 -0.65 0.2 6 3 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h1" type="capsule" fromto="6 -0.65 0.4 6 3 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h2" type="capsule" fromto="6 -0.65 0.6 6 3 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h3" type="capsule" fromto="6 -0.65 0.8 6 3 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h4" type="capsule" fromto="6 -0.65 1 6 3 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h5" type="capsule" fromto="6 -0.65 1.2 6 3 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h6" type="capsule" fromto="6 -0.65 1.4 6 3 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h7" type="capsule" fromto="6 -0.65 1.6 6 3 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h8" type="capsule" fromto="6 -0.65 1.8 6 3 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h9" type="capsule" fromto="6 -0.65 2 6 3 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h10" type="capsule" fromto="6 -0.65 2.2 6 3 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h11" type="capsule" fromto="6 -0.65 2.4 6 3 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h12" type="capsule" fromto="6 -0.65 2.6 6 3 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_h13" type="capsule" fromto="6 -0.65 2.8 6 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_post0" type="capsule" fromto="6 -0.65 0 6 -0.65 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_post1" type="capsule" fromto="6 1.175 0 6 1.175 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_post2" type="capsule" fromto="6 3 0 6 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_rail" type="capsule" fromto="6 -0.65 2.8 6 3 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate12_north_collision" type="box" pos="6 1.175 1.4" size="0.018 1.825 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="gate12_post0" type="box" pos="6 -2.185 1.3" size="0.07 0.035 1.3" rgba=".05 .65 .8 1" />
+    <geom name="gate12_post1" type="box" pos="6 -0.615 1.3" size="0.07 0.035 1.3" rgba=".05 .65 .8 1" />
+    <geom name="gate12_header" type="box" pos="6 -1.4 2.64" size="0.07 0.82 0.04" rgba=".05 .65 .8 1" />
+    <geom name="gate23_south_v0" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_v1" type="capsule" fromto="-18 -2.325 0 -18 -2.325 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_v2" type="capsule" fromto="-18 -2.15 0 -18 -2.15 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h0" type="capsule" fromto="-18 -2.5 0.2 -18 -2.15 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h1" type="capsule" fromto="-18 -2.5 0.4 -18 -2.15 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h2" type="capsule" fromto="-18 -2.5 0.6 -18 -2.15 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h3" type="capsule" fromto="-18 -2.5 0.8 -18 -2.15 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h4" type="capsule" fromto="-18 -2.5 1 -18 -2.15 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h5" type="capsule" fromto="-18 -2.5 1.2 -18 -2.15 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h6" type="capsule" fromto="-18 -2.5 1.4 -18 -2.15 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h7" type="capsule" fromto="-18 -2.5 1.6 -18 -2.15 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h8" type="capsule" fromto="-18 -2.5 1.8 -18 -2.15 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h9" type="capsule" fromto="-18 -2.5 2 -18 -2.15 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h10" type="capsule" fromto="-18 -2.5 2.2 -18 -2.15 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h11" type="capsule" fromto="-18 -2.5 2.4 -18 -2.15 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h12" type="capsule" fromto="-18 -2.5 2.6 -18 -2.15 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_h13" type="capsule" fromto="-18 -2.5 2.8 -18 -2.15 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_post0" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_post1" type="capsule" fromto="-18 -2.15 0 -18 -2.15 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_rail" type="capsule" fromto="-18 -2.5 2.8 -18 -2.15 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_south_collision" type="box" pos="-18 -2.325 1.4" size="0.018 0.175 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="gate23_north_v0" type="capsule" fromto="-18 -0.65 0 -18 -0.65 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v1" type="capsule" fromto="-18 -0.453125 0 -18 -0.453125 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v2" type="capsule" fromto="-18 -0.25625 0 -18 -0.25625 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v3" type="capsule" fromto="-18 -0.059375 0 -18 -0.059375 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v4" type="capsule" fromto="-18 0.1375 0 -18 0.1375 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v5" type="capsule" fromto="-18 0.334375 0 -18 0.334375 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v6" type="capsule" fromto="-18 0.53125 0 -18 0.53125 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v7" type="capsule" fromto="-18 0.728125 0 -18 0.728125 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v8" type="capsule" fromto="-18 0.925 0 -18 0.925 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v9" type="capsule" fromto="-18 1.121875 0 -18 1.121875 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v10" type="capsule" fromto="-18 1.31875 0 -18 1.31875 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v11" type="capsule" fromto="-18 1.515625 0 -18 1.515625 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v12" type="capsule" fromto="-18 1.7125 0 -18 1.7125 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v13" type="capsule" fromto="-18 1.909375 0 -18 1.909375 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v14" type="capsule" fromto="-18 2.10625 0 -18 2.10625 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v15" type="capsule" fromto="-18 2.303125 0 -18 2.303125 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_v16" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h0" type="capsule" fromto="-18 -0.65 0.2 -18 2.5 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h1" type="capsule" fromto="-18 -0.65 0.4 -18 2.5 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h2" type="capsule" fromto="-18 -0.65 0.6 -18 2.5 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h3" type="capsule" fromto="-18 -0.65 0.8 -18 2.5 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h4" type="capsule" fromto="-18 -0.65 1 -18 2.5 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h5" type="capsule" fromto="-18 -0.65 1.2 -18 2.5 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h6" type="capsule" fromto="-18 -0.65 1.4 -18 2.5 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h7" type="capsule" fromto="-18 -0.65 1.6 -18 2.5 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h8" type="capsule" fromto="-18 -0.65 1.8 -18 2.5 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h9" type="capsule" fromto="-18 -0.65 2 -18 2.5 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h10" type="capsule" fromto="-18 -0.65 2.2 -18 2.5 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h11" type="capsule" fromto="-18 -0.65 2.4 -18 2.5 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h12" type="capsule" fromto="-18 -0.65 2.6 -18 2.5 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_h13" type="capsule" fromto="-18 -0.65 2.8 -18 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_post0" type="capsule" fromto="-18 -0.65 0 -18 -0.65 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_post1" type="capsule" fromto="-18 0.925 0 -18 0.925 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_post2" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_rail" type="capsule" fromto="-18 -0.65 2.8 -18 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="gate23_north_collision" type="box" pos="-18 0.925 1.4" size="0.018 1.575 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="gate23_post0" type="box" pos="-18 -2.185 1.3" size="0.07 0.035 1.3" rgba=".05 .65 .8 1" />
+    <geom name="gate23_post1" type="box" pos="-18 -0.615 1.3" size="0.07 0.035 1.3" rgba=".05 .65 .8 1" />
+    <geom name="gate23_header" type="box" pos="-18 -1.4 2.64" size="0.07 0.82 0.04" rgba=".05 .65 .8 1" />
+    <geom name="marker_mount_1" type="box" pos="8.2 2.974 1.25" xyaxes="1 0 0 0 0 1" size=".2 .2 .008" rgba=".22 .25 .27 1" />
+    <geom name="marker_mount_2" type="box" pos="11.974 1.5 1.25" xyaxes="0 -1 0 0 0 1" size=".2 .2 .008" rgba=".22 .25 .27 1" />
+    <geom name="marker_mount_3" type="box" pos="10.5 -2.974 1.25" xyaxes="-1 0 0 0 0 1" size=".2 .2 .008" rgba=".22 .25 .27 1" />
+    <geom name="aruco_id1" type="plane" pos="8.2 2.965 1.25" xyaxes="1 0 0 0 0 1" size=".2 .2 .001" material="aruco_id1_mat" contype="0" conaffinity="0" />
+    <geom name="aruco_id2" type="plane" pos="11.965 1.5 1.25" xyaxes="0 -1 0 0 0 1" size=".2 .2 .001" material="aruco_id2_mat" contype="0" conaffinity="0" />
+    <geom name="aruco_id3" type="plane" pos="10.5 -2.965 1.25" xyaxes="-1 0 0 0 0 1" size=".2 .2 .001" material="aruco_id3_mat" contype="0" conaffinity="0" />
+    <geom name="takeoff_pad" type="plane" pos="8.2 -1.4 0.004" size="0.3 0.3 0.001" material="start_mat" contype="0" conaffinity="0" />
+    <camera name="start_pad_view" pos="8.2 -2.4 2" xyaxes="1 0 -0 0 0.894427191 0.447213595" fovy="45" />
+    <geom name="ring1_0" type="capsule" fromto="3.8 0.595 1 3.8 0.583567242 1.11607874" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_1" type="capsule" fromto="3.8 0.583567242 1.11607874 3.8 0.549708322 1.22769664" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_2" type="capsule" fromto="3.8 0.549708322 1.22769664 3.8 0.494724419 1.33056429" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_3" type="capsule" fromto="3.8 0.494724419 1.33056429 3.8 0.420728535 1.42072853" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_4" type="capsule" fromto="3.8 0.420728535 1.42072853 3.8 0.330564289 1.49472442" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_5" type="capsule" fromto="3.8 0.330564289 1.49472442 3.8 0.227696642 1.54970832" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_6" type="capsule" fromto="3.8 0.227696642 1.54970832 3.8 0.116078742 1.58356724" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_7" type="capsule" fromto="3.8 0.116078742 1.58356724 3.8 3.64332423e-17 1.595" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_8" type="capsule" fromto="3.8 3.64332423e-17 1.595 3.8 -0.116078742 1.58356724" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_9" type="capsule" fromto="3.8 -0.116078742 1.58356724 3.8 -0.227696642 1.54970832" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_10" type="capsule" fromto="3.8 -0.227696642 1.54970832 3.8 -0.330564289 1.49472442" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_11" type="capsule" fromto="3.8 -0.330564289 1.49472442 3.8 -0.420728535 1.42072853" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_12" type="capsule" fromto="3.8 -0.420728535 1.42072853 3.8 -0.494724419 1.33056429" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_13" type="capsule" fromto="3.8 -0.494724419 1.33056429 3.8 -0.549708322 1.22769664" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_14" type="capsule" fromto="3.8 -0.549708322 1.22769664 3.8 -0.583567242 1.11607874" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_15" type="capsule" fromto="3.8 -0.583567242 1.11607874 3.8 -0.595 1" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_16" type="capsule" fromto="3.8 -0.595 1 3.8 -0.583567242 0.883921258" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_17" type="capsule" fromto="3.8 -0.583567242 0.883921258 3.8 -0.549708322 0.772303358" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_18" type="capsule" fromto="3.8 -0.549708322 0.772303358 3.8 -0.494724419 0.669435711" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_19" type="capsule" fromto="3.8 -0.494724419 0.669435711 3.8 -0.420728535 0.579271465" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_20" type="capsule" fromto="3.8 -0.420728535 0.579271465 3.8 -0.330564289 0.505275581" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_21" type="capsule" fromto="3.8 -0.330564289 0.505275581 3.8 -0.227696642 0.450291678" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_22" type="capsule" fromto="3.8 -0.227696642 0.450291678 3.8 -0.116078742 0.416432758" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_23" type="capsule" fromto="3.8 -0.116078742 0.416432758 3.8 -1.09299727e-16 0.405" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_24" type="capsule" fromto="3.8 -1.09299727e-16 0.405 3.8 0.116078742 0.416432758" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_25" type="capsule" fromto="3.8 0.116078742 0.416432758 3.8 0.227696642 0.450291678" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_26" type="capsule" fromto="3.8 0.227696642 0.450291678 3.8 0.330564289 0.505275581" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_27" type="capsule" fromto="3.8 0.330564289 0.505275581 3.8 0.420728535 0.579271465" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_28" type="capsule" fromto="3.8 0.420728535 0.579271465 3.8 0.494724419 0.669435711" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_29" type="capsule" fromto="3.8 0.494724419 0.669435711 3.8 0.549708322 0.772303358" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_30" type="capsule" fromto="3.8 0.549708322 0.772303358 3.8 0.583567242 0.883921258" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring1_31" type="capsule" fromto="3.8 0.583567242 0.883921258 3.8 0.595 1" size="0.045" rgba="0.95 0.45 .08 1" />
+    <geom name="ring2_0" type="capsule" fromto="0.6 0.945 1.5 0.6 0.933567242 1.61607874" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_1" type="capsule" fromto="0.6 0.933567242 1.61607874 0.6 0.899708322 1.72769664" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_2" type="capsule" fromto="0.6 0.899708322 1.72769664 0.6 0.844724419 1.83056429" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_3" type="capsule" fromto="0.6 0.844724419 1.83056429 0.6 0.770728535 1.92072853" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_4" type="capsule" fromto="0.6 0.770728535 1.92072853 0.6 0.680564289 1.99472442" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_5" type="capsule" fromto="0.6 0.680564289 1.99472442 0.6 0.577696642 2.04970832" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_6" type="capsule" fromto="0.6 0.577696642 2.04970832 0.6 0.466078742 2.08356724" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_7" type="capsule" fromto="0.6 0.466078742 2.08356724 0.6 0.35 2.095" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_8" type="capsule" fromto="0.6 0.35 2.095 0.6 0.233921258 2.08356724" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_9" type="capsule" fromto="0.6 0.233921258 2.08356724 0.6 0.122303358 2.04970832" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_10" type="capsule" fromto="0.6 0.122303358 2.04970832 0.6 0.0194357114 1.99472442" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_11" type="capsule" fromto="0.6 0.0194357114 1.99472442 0.6 -0.0707285348 1.92072853" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_12" type="capsule" fromto="0.6 -0.0707285348 1.92072853 0.6 -0.144724419 1.83056429" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_13" type="capsule" fromto="0.6 -0.144724419 1.83056429 0.6 -0.199708322 1.72769664" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_14" type="capsule" fromto="0.6 -0.199708322 1.72769664 0.6 -0.233567242 1.61607874" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_15" type="capsule" fromto="0.6 -0.233567242 1.61607874 0.6 -0.245 1.5" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_16" type="capsule" fromto="0.6 -0.245 1.5 0.6 -0.233567242 1.38392126" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_17" type="capsule" fromto="0.6 -0.233567242 1.38392126 0.6 -0.199708322 1.27230336" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_18" type="capsule" fromto="0.6 -0.199708322 1.27230336 0.6 -0.144724419 1.16943571" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_19" type="capsule" fromto="0.6 -0.144724419 1.16943571 0.6 -0.0707285348 1.07927147" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_20" type="capsule" fromto="0.6 -0.0707285348 1.07927147 0.6 0.0194357114 1.00527558" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_21" type="capsule" fromto="0.6 0.0194357114 1.00527558 0.6 0.122303358 0.950291678" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_22" type="capsule" fromto="0.6 0.122303358 0.950291678 0.6 0.233921258 0.916432758" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_23" type="capsule" fromto="0.6 0.233921258 0.916432758 0.6 0.35 0.905" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_24" type="capsule" fromto="0.6 0.35 0.905 0.6 0.466078742 0.916432758" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_25" type="capsule" fromto="0.6 0.466078742 0.916432758 0.6 0.577696642 0.950291678" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_26" type="capsule" fromto="0.6 0.577696642 0.950291678 0.6 0.680564289 1.00527558" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_27" type="capsule" fromto="0.6 0.680564289 1.00527558 0.6 0.770728535 1.07927147" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_28" type="capsule" fromto="0.6 0.770728535 1.07927147 0.6 0.844724419 1.16943571" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_29" type="capsule" fromto="0.6 0.844724419 1.16943571 0.6 0.899708322 1.27230336" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_30" type="capsule" fromto="0.6 0.899708322 1.27230336 0.6 0.933567242 1.38392126" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring2_31" type="capsule" fromto="0.6 0.933567242 1.38392126 0.6 0.945 1.5" size="0.045" rgba="0.7 0.65 .08 1" />
+    <geom name="ring3_0" type="capsule" fromto="-2.6 0.245 2 -2.6 0.233567242 2.11607874" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_1" type="capsule" fromto="-2.6 0.233567242 2.11607874 -2.6 0.199708322 2.22769664" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_2" type="capsule" fromto="-2.6 0.199708322 2.22769664 -2.6 0.144724419 2.33056429" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_3" type="capsule" fromto="-2.6 0.144724419 2.33056429 -2.6 0.0707285348 2.42072853" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_4" type="capsule" fromto="-2.6 0.0707285348 2.42072853 -2.6 -0.0194357114 2.49472442" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_5" type="capsule" fromto="-2.6 -0.0194357114 2.49472442 -2.6 -0.122303358 2.54970832" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_6" type="capsule" fromto="-2.6 -0.122303358 2.54970832 -2.6 -0.233921258 2.58356724" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_7" type="capsule" fromto="-2.6 -0.233921258 2.58356724 -2.6 -0.35 2.595" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_8" type="capsule" fromto="-2.6 -0.35 2.595 -2.6 -0.466078742 2.58356724" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_9" type="capsule" fromto="-2.6 -0.466078742 2.58356724 -2.6 -0.577696642 2.54970832" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_10" type="capsule" fromto="-2.6 -0.577696642 2.54970832 -2.6 -0.680564289 2.49472442" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_11" type="capsule" fromto="-2.6 -0.680564289 2.49472442 -2.6 -0.770728535 2.42072853" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_12" type="capsule" fromto="-2.6 -0.770728535 2.42072853 -2.6 -0.844724419 2.33056429" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_13" type="capsule" fromto="-2.6 -0.844724419 2.33056429 -2.6 -0.899708322 2.22769664" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_14" type="capsule" fromto="-2.6 -0.899708322 2.22769664 -2.6 -0.933567242 2.11607874" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_15" type="capsule" fromto="-2.6 -0.933567242 2.11607874 -2.6 -0.945 2" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_16" type="capsule" fromto="-2.6 -0.945 2 -2.6 -0.933567242 1.88392126" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_17" type="capsule" fromto="-2.6 -0.933567242 1.88392126 -2.6 -0.899708322 1.77230336" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_18" type="capsule" fromto="-2.6 -0.899708322 1.77230336 -2.6 -0.844724419 1.66943571" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_19" type="capsule" fromto="-2.6 -0.844724419 1.66943571 -2.6 -0.770728535 1.57927147" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_20" type="capsule" fromto="-2.6 -0.770728535 1.57927147 -2.6 -0.680564289 1.50527558" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_21" type="capsule" fromto="-2.6 -0.680564289 1.50527558 -2.6 -0.577696642 1.45029168" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_22" type="capsule" fromto="-2.6 -0.577696642 1.45029168 -2.6 -0.466078742 1.41643276" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_23" type="capsule" fromto="-2.6 -0.466078742 1.41643276 -2.6 -0.35 1.405" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_24" type="capsule" fromto="-2.6 -0.35 1.405 -2.6 -0.233921258 1.41643276" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_25" type="capsule" fromto="-2.6 -0.233921258 1.41643276 -2.6 -0.122303358 1.45029168" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_26" type="capsule" fromto="-2.6 -0.122303358 1.45029168 -2.6 -0.0194357114 1.50527558" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_27" type="capsule" fromto="-2.6 -0.0194357114 1.50527558 -2.6 0.0707285348 1.57927147" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_28" type="capsule" fromto="-2.6 0.0707285348 1.57927147 -2.6 0.144724419 1.66943571" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_29" type="capsule" fromto="-2.6 0.144724419 1.66943571 -2.6 0.199708322 1.77230336" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_30" type="capsule" fromto="-2.6 0.199708322 1.77230336 -2.6 0.233567242 1.88392126" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="ring3_31" type="capsule" fromto="-2.6 0.233567242 1.88392126 -2.6 0.245 2" size="0.045" rgba="0.44999999999999996 0.8500000000000001 .08 1" />
+    <geom name="block1" type="box" pos="-6.4 1.1 1.25" size="0.35 0.35 1.25" rgba=".65 .43 .18 1" />
+    <geom name="block2" type="box" pos="-6.4 -1.1 1.25" size="0.35 0.35 1.25" rgba=".65 .43 .18 1" />
+    <geom name="s_wall1" type="box" pos="-10.2 -1 1.25" size="0.05 1.5 1.25" rgba="0.5 0.12 0.08 1" />
+    <geom name="s_wall2" type="box" pos="-15 1 1.25" size="0.05 1.5 1.25" rgba="0.72 0.4 0.12 1" />
+    <body name="mission3_vehicle" mocap="true" pos="-30.75 1.35 0">
+      <geom name="vehicle_chassis" type="box" pos="0 0 .145" size="0.3 0.22 .055" rgba=".08 .24 .45 1" contype="1" conaffinity="1" />
+      <geom name="vehicle_upper" type="box" pos="-.03 0 .225" size=".235 .175 .025" rgba=".12 .35 .62 1" contype="1" conaffinity="1" />
+      <geom name="landing_pad" type="box" pos="-.05 0 .285" size=".25 .20 .015" rgba=".12 .14 .16 1" contype="1" conaffinity="1" />
+      <geom name="h_left" type="box" pos="-0.05 0.065 0.3015" size=".11 .018 .0015" rgba=".96 .82 .16 1" contype="0" conaffinity="0" />
+      <geom name="h_right" type="box" pos="-0.05 -0.065 0.3015" size=".11 .018 .0015" rgba=".96 .82 .16 1" contype="0" conaffinity="0" />
+      <geom name="h_cross" type="box" pos="-0.05 0 0.3015" size=".018 .065 .0015" rgba=".96 .82 .16 1" contype="0" conaffinity="0" />
+      <geom name="marker_bracket_r" type="box" pos="0.32 -0.185 0.4" size="0.012 0.012 0.2" rgba=".16 .18 .20 1" contype="1" conaffinity="1" />
+      <geom name="marker_bracket_l" type="box" pos="0.32 0.185 0.4" size="0.012 0.012 0.2" rgba=".16 .18 .20 1" contype="1" conaffinity="1" />
+      <geom name="marker_board" type="box" pos="0.323 0 0.5" size=".006 0.2 0.2" rgba=".97 .97 .97 1" contype="1" conaffinity="1" />
+      <geom name="aruco_id0" type="plane" pos="0.3165 0 0.5" size="0.2 0.2 .001" xyaxes="0 -1 0 0 0 1" material="aruco_id0_mat" contype="0" conaffinity="0" />
+      <body name="wheel_rl" pos="-0.22 0.235 0.075">
+        <joint name="wheel_rl_joint" type="hinge" axis="0 1 0" limited="false" damping=".001" />
+        <geom name="wheel_rl_geom" type="cylinder" size="0.075 0.0225" quat=".70710678 .70710678 0 0" rgba=".055 .055 .065 1" contype="1" conaffinity="1" mass=".05" />
+        <geom name="wheel_rl_hub" type="cylinder" size="0.025500000000000002 0.02385" quat=".70710678 .70710678 0 0" rgba=".72 .75 .78 1" contype="0" conaffinity="0" mass=".001" />
+      </body>
+      <body name="wheel_rr" pos="-0.22 -0.235 0.075">
+        <joint name="wheel_rr_joint" type="hinge" axis="0 1 0" limited="false" damping=".001" />
+        <geom name="wheel_rr_geom" type="cylinder" size="0.075 0.0225" quat=".70710678 .70710678 0 0" rgba=".055 .055 .065 1" contype="1" conaffinity="1" mass=".05" />
+        <geom name="wheel_rr_hub" type="cylinder" size="0.025500000000000002 0.02385" quat=".70710678 .70710678 0 0" rgba=".72 .75 .78 1" contype="0" conaffinity="0" mass=".001" />
+      </body>
+      <camera name="vehicle" pos="-2.5 -2 1.8" xyaxes="0.624695048 -0.780868809 0 0.331294578 0.265035663 0.905538514" fovy="55" />
+      <body name="steer_fl" pos="0.22 0.235 0.075">
+        <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+        <joint name="steer_fl_joint" type="hinge" axis="0 0 1" limited="true" range="-.610865238 .610865238" />
+        <body name="wheel_fl" pos="0 0 0">
+          <joint name="wheel_fl_joint" type="hinge" axis="0 1 0" limited="false" damping=".001" />
+          <geom name="wheel_fl_geom" type="cylinder" size="0.075 0.0225" quat=".70710678 .70710678 0 0" rgba=".055 .055 .065 1" contype="1" conaffinity="1" mass=".05" />
+          <geom name="wheel_fl_hub" type="cylinder" size="0.025500000000000002 0.02385" quat=".70710678 .70710678 0 0" rgba=".72 .75 .78 1" contype="0" conaffinity="0" mass=".001" />
+        </body>
+      </body>
+      <body name="steer_fr" pos="0.22 -0.235 0.075">
+        <inertial pos="0 0 0" mass=".001" diaginertia=".000001 .000001 .000001" />
+        <joint name="steer_fr_joint" type="hinge" axis="0 0 1" limited="true" range="-.610865238 .610865238" />
+        <body name="wheel_fr" pos="0 0 0">
+          <joint name="wheel_fr_joint" type="hinge" axis="0 1 0" limited="false" damping=".001" />
+          <geom name="wheel_fr_geom" type="cylinder" size="0.075 0.0225" quat=".70710678 .70710678 0 0" rgba=".055 .055 .065 1" contype="1" conaffinity="1" mass=".05" />
+          <geom name="wheel_fr_hub" type="cylinder" size="0.025500000000000002 0.02385" quat=".70710678 .70710678 0 0" rgba=".72 .75 .78 1" contype="0" conaffinity="0" mass=".001" />
+        </body>
+      </body>
+      <inertial pos="0.0120271935 0 0.190505848" quat="0 0.628317987 0 0.777956623" mass="43.30736000000002" diaginertia="1.9867087 1.68945116 0.944930897" />
+      <camera name="pad_top" pos="-.05 0 1.6" xyaxes="0 -1 0 1 0 0" fovy="45" />
+      <camera name="pad_closeup" pos="-1.05 -0.8 1.1" xyaxes="0.624695048 -0.780868809 0 0.413714402 0.330971522 0.848114524" fovy="45" />
+    </body>
+    <camera name="overview" pos="-13 -32 35" xyaxes="1 0 -0 0 0.738028812 0.6747692" fovy="60" />
+    <camera name="top" pos="-13 0 44" xyaxes="1 0 0 0 1 0" fovy="60" />
+    <camera name="stage1" pos="5.5 -5.5 9" xyaxes="0.843661488 -0.536875492 0 0.422210053 0.66347294 0.617691127" fovy="60" />
+    <camera name="stage2" pos="-6 -15 17" xyaxes="1 0 -0 0 0.733760674 0.679408031" fovy="60" />
+    <camera name="stage3" pos="-28 -23 24" xyaxes="1 0 -0 0 0.721988205 0.691905363" fovy="60" />
+    <camera name="stage2_top" pos="-6 0 17" xyaxes="1 0 0 0 1 0" fovy="60" />
+    <body name="preview_drone" mocap="true" pos="8.2 -1.4 0.1">
+      <geom name="preview_body" type="box" pos="0 0 0" size="0.045 0.035 0.025" rgba=".1 .7 .95 .85" contype="0" conaffinity="0" />
+      <geom name="preview_arm0" type="capsule" fromto="0 0 0 -0.06 -0.06 0" size="0.008" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+      <geom name="preview_rotor0" type="cylinder" pos="-0.06 -0.06 0" size=".027 .003" rgba=".15 .18 .2 .8" contype="0" conaffinity="0" />
+      <geom name="preview_arm1" type="capsule" fromto="0 0 0 -0.06 0.06 0" size="0.008" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+      <geom name="preview_rotor1" type="cylinder" pos="-0.06 0.06 0" size=".027 .003" rgba=".15 .18 .2 .8" contype="0" conaffinity="0" />
+      <geom name="preview_arm2" type="capsule" fromto="0 0 0 0.06 -0.06 0" size="0.008" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+      <geom name="preview_rotor2" type="cylinder" pos="0.06 -0.06 0" size=".027 .003" rgba=".15 .18 .2 .8" contype="0" conaffinity="0" />
+      <geom name="preview_arm3" type="capsule" fromto="0 0 0 0.06 0.06 0" size="0.008" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+      <geom name="preview_rotor3" type="cylinder" pos="0.06 0.06 0" size=".027 .003" rgba=".15 .18 .2 .8" contype="0" conaffinity="0" />
+      <camera name="fpv" pos="0.03 0 0" xyaxes="0 -1 0 0 0 1" fovy="70" />
+      <camera name="flow" pos="0 0 -.06" xyaxes="0 -1 0 1 0 0" fovy="70" />
+    </body>
+    <body name="collision_probe" pos="0 0 5">
+      <freejoint name="probe_joint" />
+      <geom name="probe" type="sphere" size="0.1" mass="0.03" rgba="0 0 0 0" />
+    </body>
+    <geom name="m3_fence_north_v0" type="capsule" fromto="-38 10 0 -38 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v1" type="capsule" fromto="-37.8 10 0 -37.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v2" type="capsule" fromto="-37.6 10 0 -37.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v3" type="capsule" fromto="-37.4 10 0 -37.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v4" type="capsule" fromto="-37.2 10 0 -37.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v5" type="capsule" fromto="-37 10 0 -37 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v6" type="capsule" fromto="-36.8 10 0 -36.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v7" type="capsule" fromto="-36.6 10 0 -36.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v8" type="capsule" fromto="-36.4 10 0 -36.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v9" type="capsule" fromto="-36.2 10 0 -36.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v10" type="capsule" fromto="-36 10 0 -36 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v11" type="capsule" fromto="-35.8 10 0 -35.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v12" type="capsule" fromto="-35.6 10 0 -35.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v13" type="capsule" fromto="-35.4 10 0 -35.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v14" type="capsule" fromto="-35.2 10 0 -35.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v15" type="capsule" fromto="-35 10 0 -35 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v16" type="capsule" fromto="-34.8 10 0 -34.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v17" type="capsule" fromto="-34.6 10 0 -34.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v18" type="capsule" fromto="-34.4 10 0 -34.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v19" type="capsule" fromto="-34.2 10 0 -34.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v20" type="capsule" fromto="-34 10 0 -34 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v21" type="capsule" fromto="-33.8 10 0 -33.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v22" type="capsule" fromto="-33.6 10 0 -33.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v23" type="capsule" fromto="-33.4 10 0 -33.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v24" type="capsule" fromto="-33.2 10 0 -33.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v25" type="capsule" fromto="-33 10 0 -33 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v26" type="capsule" fromto="-32.8 10 0 -32.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v27" type="capsule" fromto="-32.6 10 0 -32.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v28" type="capsule" fromto="-32.4 10 0 -32.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v29" type="capsule" fromto="-32.2 10 0 -32.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v30" type="capsule" fromto="-32 10 0 -32 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v31" type="capsule" fromto="-31.8 10 0 -31.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v32" type="capsule" fromto="-31.6 10 0 -31.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v33" type="capsule" fromto="-31.4 10 0 -31.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v34" type="capsule" fromto="-31.2 10 0 -31.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v35" type="capsule" fromto="-31 10 0 -31 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v36" type="capsule" fromto="-30.8 10 0 -30.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v37" type="capsule" fromto="-30.6 10 0 -30.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v38" type="capsule" fromto="-30.4 10 0 -30.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v39" type="capsule" fromto="-30.2 10 0 -30.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v40" type="capsule" fromto="-30 10 0 -30 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v41" type="capsule" fromto="-29.8 10 0 -29.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v42" type="capsule" fromto="-29.6 10 0 -29.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v43" type="capsule" fromto="-29.4 10 0 -29.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v44" type="capsule" fromto="-29.2 10 0 -29.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v45" type="capsule" fromto="-29 10 0 -29 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v46" type="capsule" fromto="-28.8 10 0 -28.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v47" type="capsule" fromto="-28.6 10 0 -28.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v48" type="capsule" fromto="-28.4 10 0 -28.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v49" type="capsule" fromto="-28.2 10 0 -28.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v50" type="capsule" fromto="-28 10 0 -28 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v51" type="capsule" fromto="-27.8 10 0 -27.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v52" type="capsule" fromto="-27.6 10 0 -27.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v53" type="capsule" fromto="-27.4 10 0 -27.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v54" type="capsule" fromto="-27.2 10 0 -27.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v55" type="capsule" fromto="-27 10 0 -27 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v56" type="capsule" fromto="-26.8 10 0 -26.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v57" type="capsule" fromto="-26.6 10 0 -26.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v58" type="capsule" fromto="-26.4 10 0 -26.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v59" type="capsule" fromto="-26.2 10 0 -26.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v60" type="capsule" fromto="-26 10 0 -26 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v61" type="capsule" fromto="-25.8 10 0 -25.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v62" type="capsule" fromto="-25.6 10 0 -25.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v63" type="capsule" fromto="-25.4 10 0 -25.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v64" type="capsule" fromto="-25.2 10 0 -25.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v65" type="capsule" fromto="-25 10 0 -25 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v66" type="capsule" fromto="-24.8 10 0 -24.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v67" type="capsule" fromto="-24.6 10 0 -24.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v68" type="capsule" fromto="-24.4 10 0 -24.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v69" type="capsule" fromto="-24.2 10 0 -24.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v70" type="capsule" fromto="-24 10 0 -24 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v71" type="capsule" fromto="-23.8 10 0 -23.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v72" type="capsule" fromto="-23.6 10 0 -23.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v73" type="capsule" fromto="-23.4 10 0 -23.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v74" type="capsule" fromto="-23.2 10 0 -23.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v75" type="capsule" fromto="-23 10 0 -23 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v76" type="capsule" fromto="-22.8 10 0 -22.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v77" type="capsule" fromto="-22.6 10 0 -22.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v78" type="capsule" fromto="-22.4 10 0 -22.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v79" type="capsule" fromto="-22.2 10 0 -22.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v80" type="capsule" fromto="-22 10 0 -22 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v81" type="capsule" fromto="-21.8 10 0 -21.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v82" type="capsule" fromto="-21.6 10 0 -21.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v83" type="capsule" fromto="-21.4 10 0 -21.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v84" type="capsule" fromto="-21.2 10 0 -21.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v85" type="capsule" fromto="-21 10 0 -21 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v86" type="capsule" fromto="-20.8 10 0 -20.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v87" type="capsule" fromto="-20.6 10 0 -20.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v88" type="capsule" fromto="-20.4 10 0 -20.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v89" type="capsule" fromto="-20.2 10 0 -20.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v90" type="capsule" fromto="-20 10 0 -20 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v91" type="capsule" fromto="-19.8 10 0 -19.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v92" type="capsule" fromto="-19.6 10 0 -19.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v93" type="capsule" fromto="-19.4 10 0 -19.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v94" type="capsule" fromto="-19.2 10 0 -19.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v95" type="capsule" fromto="-19 10 0 -19 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v96" type="capsule" fromto="-18.8 10 0 -18.8 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v97" type="capsule" fromto="-18.6 10 0 -18.6 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v98" type="capsule" fromto="-18.4 10 0 -18.4 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v99" type="capsule" fromto="-18.2 10 0 -18.2 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_v100" type="capsule" fromto="-18 10 0 -18 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h0" type="capsule" fromto="-38 10 0.2 -18 10 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h1" type="capsule" fromto="-38 10 0.4 -18 10 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h2" type="capsule" fromto="-38 10 0.6 -18 10 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h3" type="capsule" fromto="-38 10 0.8 -18 10 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h4" type="capsule" fromto="-38 10 1 -18 10 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h5" type="capsule" fromto="-38 10 1.2 -18 10 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h6" type="capsule" fromto="-38 10 1.4 -18 10 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h7" type="capsule" fromto="-38 10 1.6 -18 10 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h8" type="capsule" fromto="-38 10 1.8 -18 10 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h9" type="capsule" fromto="-38 10 2 -18 10 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h10" type="capsule" fromto="-38 10 2.2 -18 10 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h11" type="capsule" fromto="-38 10 2.4 -18 10 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h12" type="capsule" fromto="-38 10 2.6 -18 10 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_h13" type="capsule" fromto="-38 10 2.8 -18 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post0" type="capsule" fromto="-38 10 0 -38 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post1" type="capsule" fromto="-35.5 10 0 -35.5 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post2" type="capsule" fromto="-33 10 0 -33 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post3" type="capsule" fromto="-30.5 10 0 -30.5 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post4" type="capsule" fromto="-28 10 0 -28 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post5" type="capsule" fromto="-25.5 10 0 -25.5 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post6" type="capsule" fromto="-23 10 0 -23 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post7" type="capsule" fromto="-20.5 10 0 -20.5 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_post8" type="capsule" fromto="-18 10 0 -18 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_rail" type="capsule" fromto="-38 10 2.8 -18 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_north_collision" type="box" pos="-28 10 1.4" size="10 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="m3_fence_south_v0" type="capsule" fromto="-38 -10 0 -38 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v1" type="capsule" fromto="-37.8 -10 0 -37.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v2" type="capsule" fromto="-37.6 -10 0 -37.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v3" type="capsule" fromto="-37.4 -10 0 -37.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v4" type="capsule" fromto="-37.2 -10 0 -37.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v5" type="capsule" fromto="-37 -10 0 -37 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v6" type="capsule" fromto="-36.8 -10 0 -36.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v7" type="capsule" fromto="-36.6 -10 0 -36.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v8" type="capsule" fromto="-36.4 -10 0 -36.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v9" type="capsule" fromto="-36.2 -10 0 -36.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v10" type="capsule" fromto="-36 -10 0 -36 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v11" type="capsule" fromto="-35.8 -10 0 -35.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v12" type="capsule" fromto="-35.6 -10 0 -35.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v13" type="capsule" fromto="-35.4 -10 0 -35.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v14" type="capsule" fromto="-35.2 -10 0 -35.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v15" type="capsule" fromto="-35 -10 0 -35 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v16" type="capsule" fromto="-34.8 -10 0 -34.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v17" type="capsule" fromto="-34.6 -10 0 -34.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v18" type="capsule" fromto="-34.4 -10 0 -34.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v19" type="capsule" fromto="-34.2 -10 0 -34.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v20" type="capsule" fromto="-34 -10 0 -34 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v21" type="capsule" fromto="-33.8 -10 0 -33.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v22" type="capsule" fromto="-33.6 -10 0 -33.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v23" type="capsule" fromto="-33.4 -10 0 -33.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v24" type="capsule" fromto="-33.2 -10 0 -33.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v25" type="capsule" fromto="-33 -10 0 -33 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v26" type="capsule" fromto="-32.8 -10 0 -32.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v27" type="capsule" fromto="-32.6 -10 0 -32.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v28" type="capsule" fromto="-32.4 -10 0 -32.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v29" type="capsule" fromto="-32.2 -10 0 -32.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v30" type="capsule" fromto="-32 -10 0 -32 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v31" type="capsule" fromto="-31.8 -10 0 -31.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v32" type="capsule" fromto="-31.6 -10 0 -31.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v33" type="capsule" fromto="-31.4 -10 0 -31.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v34" type="capsule" fromto="-31.2 -10 0 -31.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v35" type="capsule" fromto="-31 -10 0 -31 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v36" type="capsule" fromto="-30.8 -10 0 -30.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v37" type="capsule" fromto="-30.6 -10 0 -30.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v38" type="capsule" fromto="-30.4 -10 0 -30.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v39" type="capsule" fromto="-30.2 -10 0 -30.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v40" type="capsule" fromto="-30 -10 0 -30 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v41" type="capsule" fromto="-29.8 -10 0 -29.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v42" type="capsule" fromto="-29.6 -10 0 -29.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v43" type="capsule" fromto="-29.4 -10 0 -29.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v44" type="capsule" fromto="-29.2 -10 0 -29.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v45" type="capsule" fromto="-29 -10 0 -29 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v46" type="capsule" fromto="-28.8 -10 0 -28.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v47" type="capsule" fromto="-28.6 -10 0 -28.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v48" type="capsule" fromto="-28.4 -10 0 -28.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v49" type="capsule" fromto="-28.2 -10 0 -28.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v50" type="capsule" fromto="-28 -10 0 -28 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v51" type="capsule" fromto="-27.8 -10 0 -27.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v52" type="capsule" fromto="-27.6 -10 0 -27.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v53" type="capsule" fromto="-27.4 -10 0 -27.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v54" type="capsule" fromto="-27.2 -10 0 -27.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v55" type="capsule" fromto="-27 -10 0 -27 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v56" type="capsule" fromto="-26.8 -10 0 -26.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v57" type="capsule" fromto="-26.6 -10 0 -26.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v58" type="capsule" fromto="-26.4 -10 0 -26.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v59" type="capsule" fromto="-26.2 -10 0 -26.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v60" type="capsule" fromto="-26 -10 0 -26 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v61" type="capsule" fromto="-25.8 -10 0 -25.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v62" type="capsule" fromto="-25.6 -10 0 -25.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v63" type="capsule" fromto="-25.4 -10 0 -25.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v64" type="capsule" fromto="-25.2 -10 0 -25.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v65" type="capsule" fromto="-25 -10 0 -25 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v66" type="capsule" fromto="-24.8 -10 0 -24.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v67" type="capsule" fromto="-24.6 -10 0 -24.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v68" type="capsule" fromto="-24.4 -10 0 -24.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v69" type="capsule" fromto="-24.2 -10 0 -24.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v70" type="capsule" fromto="-24 -10 0 -24 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v71" type="capsule" fromto="-23.8 -10 0 -23.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v72" type="capsule" fromto="-23.6 -10 0 -23.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v73" type="capsule" fromto="-23.4 -10 0 -23.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v74" type="capsule" fromto="-23.2 -10 0 -23.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v75" type="capsule" fromto="-23 -10 0 -23 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v76" type="capsule" fromto="-22.8 -10 0 -22.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v77" type="capsule" fromto="-22.6 -10 0 -22.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v78" type="capsule" fromto="-22.4 -10 0 -22.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v79" type="capsule" fromto="-22.2 -10 0 -22.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v80" type="capsule" fromto="-22 -10 0 -22 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v81" type="capsule" fromto="-21.8 -10 0 -21.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v82" type="capsule" fromto="-21.6 -10 0 -21.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v83" type="capsule" fromto="-21.4 -10 0 -21.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v84" type="capsule" fromto="-21.2 -10 0 -21.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v85" type="capsule" fromto="-21 -10 0 -21 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v86" type="capsule" fromto="-20.8 -10 0 -20.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v87" type="capsule" fromto="-20.6 -10 0 -20.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v88" type="capsule" fromto="-20.4 -10 0 -20.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v89" type="capsule" fromto="-20.2 -10 0 -20.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v90" type="capsule" fromto="-20 -10 0 -20 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v91" type="capsule" fromto="-19.8 -10 0 -19.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v92" type="capsule" fromto="-19.6 -10 0 -19.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v93" type="capsule" fromto="-19.4 -10 0 -19.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v94" type="capsule" fromto="-19.2 -10 0 -19.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v95" type="capsule" fromto="-19 -10 0 -19 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v96" type="capsule" fromto="-18.8 -10 0 -18.8 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v97" type="capsule" fromto="-18.6 -10 0 -18.6 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v98" type="capsule" fromto="-18.4 -10 0 -18.4 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v99" type="capsule" fromto="-18.2 -10 0 -18.2 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_v100" type="capsule" fromto="-18 -10 0 -18 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h0" type="capsule" fromto="-38 -10 0.2 -18 -10 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h1" type="capsule" fromto="-38 -10 0.4 -18 -10 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h2" type="capsule" fromto="-38 -10 0.6 -18 -10 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h3" type="capsule" fromto="-38 -10 0.8 -18 -10 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h4" type="capsule" fromto="-38 -10 1 -18 -10 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h5" type="capsule" fromto="-38 -10 1.2 -18 -10 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h6" type="capsule" fromto="-38 -10 1.4 -18 -10 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h7" type="capsule" fromto="-38 -10 1.6 -18 -10 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h8" type="capsule" fromto="-38 -10 1.8 -18 -10 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h9" type="capsule" fromto="-38 -10 2 -18 -10 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h10" type="capsule" fromto="-38 -10 2.2 -18 -10 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h11" type="capsule" fromto="-38 -10 2.4 -18 -10 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h12" type="capsule" fromto="-38 -10 2.6 -18 -10 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_h13" type="capsule" fromto="-38 -10 2.8 -18 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post0" type="capsule" fromto="-38 -10 0 -38 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post1" type="capsule" fromto="-35.5 -10 0 -35.5 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post2" type="capsule" fromto="-33 -10 0 -33 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post3" type="capsule" fromto="-30.5 -10 0 -30.5 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post4" type="capsule" fromto="-28 -10 0 -28 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post5" type="capsule" fromto="-25.5 -10 0 -25.5 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post6" type="capsule" fromto="-23 -10 0 -23 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post7" type="capsule" fromto="-20.5 -10 0 -20.5 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_post8" type="capsule" fromto="-18 -10 0 -18 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_rail" type="capsule" fromto="-38 -10 2.8 -18 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_south_collision" type="box" pos="-28 -10 1.4" size="10 0.018 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="m3_fence_west_v0" type="capsule" fromto="-38 -10 0 -38 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v1" type="capsule" fromto="-38 -9.8 0 -38 -9.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v2" type="capsule" fromto="-38 -9.6 0 -38 -9.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v3" type="capsule" fromto="-38 -9.4 0 -38 -9.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v4" type="capsule" fromto="-38 -9.2 0 -38 -9.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v5" type="capsule" fromto="-38 -9 0 -38 -9 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v6" type="capsule" fromto="-38 -8.8 0 -38 -8.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v7" type="capsule" fromto="-38 -8.6 0 -38 -8.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v8" type="capsule" fromto="-38 -8.4 0 -38 -8.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v9" type="capsule" fromto="-38 -8.2 0 -38 -8.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v10" type="capsule" fromto="-38 -8 0 -38 -8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v11" type="capsule" fromto="-38 -7.8 0 -38 -7.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v12" type="capsule" fromto="-38 -7.6 0 -38 -7.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v13" type="capsule" fromto="-38 -7.4 0 -38 -7.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v14" type="capsule" fromto="-38 -7.2 0 -38 -7.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v15" type="capsule" fromto="-38 -7 0 -38 -7 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v16" type="capsule" fromto="-38 -6.8 0 -38 -6.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v17" type="capsule" fromto="-38 -6.6 0 -38 -6.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v18" type="capsule" fromto="-38 -6.4 0 -38 -6.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v19" type="capsule" fromto="-38 -6.2 0 -38 -6.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v20" type="capsule" fromto="-38 -6 0 -38 -6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v21" type="capsule" fromto="-38 -5.8 0 -38 -5.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v22" type="capsule" fromto="-38 -5.6 0 -38 -5.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v23" type="capsule" fromto="-38 -5.4 0 -38 -5.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v24" type="capsule" fromto="-38 -5.2 0 -38 -5.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v25" type="capsule" fromto="-38 -5 0 -38 -5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v26" type="capsule" fromto="-38 -4.8 0 -38 -4.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v27" type="capsule" fromto="-38 -4.6 0 -38 -4.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v28" type="capsule" fromto="-38 -4.4 0 -38 -4.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v29" type="capsule" fromto="-38 -4.2 0 -38 -4.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v30" type="capsule" fromto="-38 -4 0 -38 -4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v31" type="capsule" fromto="-38 -3.8 0 -38 -3.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v32" type="capsule" fromto="-38 -3.6 0 -38 -3.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v33" type="capsule" fromto="-38 -3.4 0 -38 -3.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v34" type="capsule" fromto="-38 -3.2 0 -38 -3.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v35" type="capsule" fromto="-38 -3 0 -38 -3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v36" type="capsule" fromto="-38 -2.8 0 -38 -2.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v37" type="capsule" fromto="-38 -2.6 0 -38 -2.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v38" type="capsule" fromto="-38 -2.4 0 -38 -2.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v39" type="capsule" fromto="-38 -2.2 0 -38 -2.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v40" type="capsule" fromto="-38 -2 0 -38 -2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v41" type="capsule" fromto="-38 -1.8 0 -38 -1.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v42" type="capsule" fromto="-38 -1.6 0 -38 -1.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v43" type="capsule" fromto="-38 -1.4 0 -38 -1.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v44" type="capsule" fromto="-38 -1.2 0 -38 -1.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v45" type="capsule" fromto="-38 -1 0 -38 -1 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v46" type="capsule" fromto="-38 -0.8 0 -38 -0.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v47" type="capsule" fromto="-38 -0.6 0 -38 -0.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v48" type="capsule" fromto="-38 -0.4 0 -38 -0.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v49" type="capsule" fromto="-38 -0.2 0 -38 -0.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v50" type="capsule" fromto="-38 0 0 -38 0 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v51" type="capsule" fromto="-38 0.2 0 -38 0.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v52" type="capsule" fromto="-38 0.4 0 -38 0.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v53" type="capsule" fromto="-38 0.6 0 -38 0.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v54" type="capsule" fromto="-38 0.8 0 -38 0.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v55" type="capsule" fromto="-38 1 0 -38 1 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v56" type="capsule" fromto="-38 1.2 0 -38 1.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v57" type="capsule" fromto="-38 1.4 0 -38 1.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v58" type="capsule" fromto="-38 1.6 0 -38 1.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v59" type="capsule" fromto="-38 1.8 0 -38 1.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v60" type="capsule" fromto="-38 2 0 -38 2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v61" type="capsule" fromto="-38 2.2 0 -38 2.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v62" type="capsule" fromto="-38 2.4 0 -38 2.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v63" type="capsule" fromto="-38 2.6 0 -38 2.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v64" type="capsule" fromto="-38 2.8 0 -38 2.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v65" type="capsule" fromto="-38 3 0 -38 3 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v66" type="capsule" fromto="-38 3.2 0 -38 3.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v67" type="capsule" fromto="-38 3.4 0 -38 3.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v68" type="capsule" fromto="-38 3.6 0 -38 3.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v69" type="capsule" fromto="-38 3.8 0 -38 3.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v70" type="capsule" fromto="-38 4 0 -38 4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v71" type="capsule" fromto="-38 4.2 0 -38 4.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v72" type="capsule" fromto="-38 4.4 0 -38 4.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v73" type="capsule" fromto="-38 4.6 0 -38 4.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v74" type="capsule" fromto="-38 4.8 0 -38 4.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v75" type="capsule" fromto="-38 5 0 -38 5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v76" type="capsule" fromto="-38 5.2 0 -38 5.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v77" type="capsule" fromto="-38 5.4 0 -38 5.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v78" type="capsule" fromto="-38 5.6 0 -38 5.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v79" type="capsule" fromto="-38 5.8 0 -38 5.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v80" type="capsule" fromto="-38 6 0 -38 6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v81" type="capsule" fromto="-38 6.2 0 -38 6.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v82" type="capsule" fromto="-38 6.4 0 -38 6.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v83" type="capsule" fromto="-38 6.6 0 -38 6.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v84" type="capsule" fromto="-38 6.8 0 -38 6.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v85" type="capsule" fromto="-38 7 0 -38 7 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v86" type="capsule" fromto="-38 7.2 0 -38 7.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v87" type="capsule" fromto="-38 7.4 0 -38 7.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v88" type="capsule" fromto="-38 7.6 0 -38 7.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v89" type="capsule" fromto="-38 7.8 0 -38 7.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v90" type="capsule" fromto="-38 8 0 -38 8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v91" type="capsule" fromto="-38 8.2 0 -38 8.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v92" type="capsule" fromto="-38 8.4 0 -38 8.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v93" type="capsule" fromto="-38 8.6 0 -38 8.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v94" type="capsule" fromto="-38 8.8 0 -38 8.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v95" type="capsule" fromto="-38 9 0 -38 9 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v96" type="capsule" fromto="-38 9.2 0 -38 9.2 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v97" type="capsule" fromto="-38 9.4 0 -38 9.4 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v98" type="capsule" fromto="-38 9.6 0 -38 9.6 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v99" type="capsule" fromto="-38 9.8 0 -38 9.8 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_v100" type="capsule" fromto="-38 10 0 -38 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h0" type="capsule" fromto="-38 -10 0.2 -38 10 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h1" type="capsule" fromto="-38 -10 0.4 -38 10 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h2" type="capsule" fromto="-38 -10 0.6 -38 10 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h3" type="capsule" fromto="-38 -10 0.8 -38 10 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h4" type="capsule" fromto="-38 -10 1 -38 10 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h5" type="capsule" fromto="-38 -10 1.2 -38 10 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h6" type="capsule" fromto="-38 -10 1.4 -38 10 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h7" type="capsule" fromto="-38 -10 1.6 -38 10 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h8" type="capsule" fromto="-38 -10 1.8 -38 10 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h9" type="capsule" fromto="-38 -10 2 -38 10 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h10" type="capsule" fromto="-38 -10 2.2 -38 10 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h11" type="capsule" fromto="-38 -10 2.4 -38 10 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h12" type="capsule" fromto="-38 -10 2.6 -38 10 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_h13" type="capsule" fromto="-38 -10 2.8 -38 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post0" type="capsule" fromto="-38 -10 0 -38 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post1" type="capsule" fromto="-38 -7.5 0 -38 -7.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post2" type="capsule" fromto="-38 -5 0 -38 -5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post3" type="capsule" fromto="-38 -2.5 0 -38 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post4" type="capsule" fromto="-38 0 0 -38 0 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post5" type="capsule" fromto="-38 2.5 0 -38 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post6" type="capsule" fromto="-38 5 0 -38 5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post7" type="capsule" fromto="-38 7.5 0 -38 7.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_post8" type="capsule" fromto="-38 10 0 -38 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_rail" type="capsule" fromto="-38 -10 2.8 -38 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_west_collision" type="box" pos="-38 0 1.4" size="0.018 10 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="m3_fence_east_north_v0" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v1" type="capsule" fromto="-18 2.69736842 0 -18 2.69736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v2" type="capsule" fromto="-18 2.89473684 0 -18 2.89473684 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v3" type="capsule" fromto="-18 3.09210526 0 -18 3.09210526 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v4" type="capsule" fromto="-18 3.28947368 0 -18 3.28947368 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v5" type="capsule" fromto="-18 3.48684211 0 -18 3.48684211 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v6" type="capsule" fromto="-18 3.68421053 0 -18 3.68421053 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v7" type="capsule" fromto="-18 3.88157895 0 -18 3.88157895 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v8" type="capsule" fromto="-18 4.07894737 0 -18 4.07894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v9" type="capsule" fromto="-18 4.27631579 0 -18 4.27631579 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v10" type="capsule" fromto="-18 4.47368421 0 -18 4.47368421 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v11" type="capsule" fromto="-18 4.67105263 0 -18 4.67105263 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v12" type="capsule" fromto="-18 4.86842105 0 -18 4.86842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v13" type="capsule" fromto="-18 5.06578947 0 -18 5.06578947 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v14" type="capsule" fromto="-18 5.26315789 0 -18 5.26315789 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v15" type="capsule" fromto="-18 5.46052632 0 -18 5.46052632 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v16" type="capsule" fromto="-18 5.65789474 0 -18 5.65789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v17" type="capsule" fromto="-18 5.85526316 0 -18 5.85526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v18" type="capsule" fromto="-18 6.05263158 0 -18 6.05263158 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v19" type="capsule" fromto="-18 6.25 0 -18 6.25 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v20" type="capsule" fromto="-18 6.44736842 0 -18 6.44736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v21" type="capsule" fromto="-18 6.64473684 0 -18 6.64473684 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v22" type="capsule" fromto="-18 6.84210526 0 -18 6.84210526 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v23" type="capsule" fromto="-18 7.03947368 0 -18 7.03947368 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v24" type="capsule" fromto="-18 7.23684211 0 -18 7.23684211 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v25" type="capsule" fromto="-18 7.43421053 0 -18 7.43421053 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v26" type="capsule" fromto="-18 7.63157895 0 -18 7.63157895 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v27" type="capsule" fromto="-18 7.82894737 0 -18 7.82894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v28" type="capsule" fromto="-18 8.02631579 0 -18 8.02631579 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v29" type="capsule" fromto="-18 8.22368421 0 -18 8.22368421 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v30" type="capsule" fromto="-18 8.42105263 0 -18 8.42105263 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v31" type="capsule" fromto="-18 8.61842105 0 -18 8.61842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v32" type="capsule" fromto="-18 8.81578947 0 -18 8.81578947 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v33" type="capsule" fromto="-18 9.01315789 0 -18 9.01315789 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v34" type="capsule" fromto="-18 9.21052632 0 -18 9.21052632 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v35" type="capsule" fromto="-18 9.40789474 0 -18 9.40789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v36" type="capsule" fromto="-18 9.60526316 0 -18 9.60526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v37" type="capsule" fromto="-18 9.80263158 0 -18 9.80263158 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_v38" type="capsule" fromto="-18 10 0 -18 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h0" type="capsule" fromto="-18 2.5 0.2 -18 10 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h1" type="capsule" fromto="-18 2.5 0.4 -18 10 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h2" type="capsule" fromto="-18 2.5 0.6 -18 10 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h3" type="capsule" fromto="-18 2.5 0.8 -18 10 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h4" type="capsule" fromto="-18 2.5 1 -18 10 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h5" type="capsule" fromto="-18 2.5 1.2 -18 10 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h6" type="capsule" fromto="-18 2.5 1.4 -18 10 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h7" type="capsule" fromto="-18 2.5 1.6 -18 10 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h8" type="capsule" fromto="-18 2.5 1.8 -18 10 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h9" type="capsule" fromto="-18 2.5 2 -18 10 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h10" type="capsule" fromto="-18 2.5 2.2 -18 10 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h11" type="capsule" fromto="-18 2.5 2.4 -18 10 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h12" type="capsule" fromto="-18 2.5 2.6 -18 10 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_h13" type="capsule" fromto="-18 2.5 2.8 -18 10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_post0" type="capsule" fromto="-18 2.5 0 -18 2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_post1" type="capsule" fromto="-18 5 0 -18 5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_post2" type="capsule" fromto="-18 7.5 0 -18 7.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_post3" type="capsule" fromto="-18 10 0 -18 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_rail" type="capsule" fromto="-18 2.5 2.8 -18 10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_north_collision" type="box" pos="-18 6.25 1.4" size="0.018 3.75 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="m3_fence_east_south_v0" type="capsule" fromto="-18 -10 0 -18 -10 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v1" type="capsule" fromto="-18 -9.80263158 0 -18 -9.80263158 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v2" type="capsule" fromto="-18 -9.60526316 0 -18 -9.60526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v3" type="capsule" fromto="-18 -9.40789474 0 -18 -9.40789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v4" type="capsule" fromto="-18 -9.21052632 0 -18 -9.21052632 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v5" type="capsule" fromto="-18 -9.01315789 0 -18 -9.01315789 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v6" type="capsule" fromto="-18 -8.81578947 0 -18 -8.81578947 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v7" type="capsule" fromto="-18 -8.61842105 0 -18 -8.61842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v8" type="capsule" fromto="-18 -8.42105263 0 -18 -8.42105263 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v9" type="capsule" fromto="-18 -8.22368421 0 -18 -8.22368421 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v10" type="capsule" fromto="-18 -8.02631579 0 -18 -8.02631579 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v11" type="capsule" fromto="-18 -7.82894737 0 -18 -7.82894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v12" type="capsule" fromto="-18 -7.63157895 0 -18 -7.63157895 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v13" type="capsule" fromto="-18 -7.43421053 0 -18 -7.43421053 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v14" type="capsule" fromto="-18 -7.23684211 0 -18 -7.23684211 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v15" type="capsule" fromto="-18 -7.03947368 0 -18 -7.03947368 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v16" type="capsule" fromto="-18 -6.84210526 0 -18 -6.84210526 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v17" type="capsule" fromto="-18 -6.64473684 0 -18 -6.64473684 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v18" type="capsule" fromto="-18 -6.44736842 0 -18 -6.44736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v19" type="capsule" fromto="-18 -6.25 0 -18 -6.25 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v20" type="capsule" fromto="-18 -6.05263158 0 -18 -6.05263158 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v21" type="capsule" fromto="-18 -5.85526316 0 -18 -5.85526316 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v22" type="capsule" fromto="-18 -5.65789474 0 -18 -5.65789474 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v23" type="capsule" fromto="-18 -5.46052632 0 -18 -5.46052632 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v24" type="capsule" fromto="-18 -5.26315789 0 -18 -5.26315789 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v25" type="capsule" fromto="-18 -5.06578947 0 -18 -5.06578947 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v26" type="capsule" fromto="-18 -4.86842105 0 -18 -4.86842105 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v27" type="capsule" fromto="-18 -4.67105263 0 -18 -4.67105263 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v28" type="capsule" fromto="-18 -4.47368421 0 -18 -4.47368421 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v29" type="capsule" fromto="-18 -4.27631579 0 -18 -4.27631579 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v30" type="capsule" fromto="-18 -4.07894737 0 -18 -4.07894737 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v31" type="capsule" fromto="-18 -3.88157895 0 -18 -3.88157895 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v32" type="capsule" fromto="-18 -3.68421053 0 -18 -3.68421053 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v33" type="capsule" fromto="-18 -3.48684211 0 -18 -3.48684211 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v34" type="capsule" fromto="-18 -3.28947368 0 -18 -3.28947368 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v35" type="capsule" fromto="-18 -3.09210526 0 -18 -3.09210526 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v36" type="capsule" fromto="-18 -2.89473684 0 -18 -2.89473684 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v37" type="capsule" fromto="-18 -2.69736842 0 -18 -2.69736842 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_v38" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h0" type="capsule" fromto="-18 -10 0.2 -18 -2.5 0.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h1" type="capsule" fromto="-18 -10 0.4 -18 -2.5 0.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h2" type="capsule" fromto="-18 -10 0.6 -18 -2.5 0.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h3" type="capsule" fromto="-18 -10 0.8 -18 -2.5 0.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h4" type="capsule" fromto="-18 -10 1 -18 -2.5 1" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h5" type="capsule" fromto="-18 -10 1.2 -18 -2.5 1.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h6" type="capsule" fromto="-18 -10 1.4 -18 -2.5 1.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h7" type="capsule" fromto="-18 -10 1.6 -18 -2.5 1.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h8" type="capsule" fromto="-18 -10 1.8 -18 -2.5 1.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h9" type="capsule" fromto="-18 -10 2 -18 -2.5 2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h10" type="capsule" fromto="-18 -10 2.2 -18 -2.5 2.2" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h11" type="capsule" fromto="-18 -10 2.4 -18 -2.5 2.4" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h12" type="capsule" fromto="-18 -10 2.6 -18 -2.5 2.6" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_h13" type="capsule" fromto="-18 -10 2.8 -18 -2.5 2.8" size="0.005" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_post0" type="capsule" fromto="-18 -10 0 -18 -10 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_post1" type="capsule" fromto="-18 -7.5 0 -18 -7.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_post2" type="capsule" fromto="-18 -5 0 -18 -5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_post3" type="capsule" fromto="-18 -2.5 0 -18 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_rail" type="capsule" fromto="-18 -10 2.8 -18 -2.5 2.8" size="0.025" rgba=".13 .16 .18 1" contype="0" conaffinity="0" />
+    <geom name="m3_fence_east_south_collision" type="box" pos="-18 -6.25 1.4" size="0.018 3.75 1.4" rgba="0 0 0 0" contype="1" conaffinity="1" />
+    <geom name="m3_surface" type="box" pos="-28 0 -0.008" size="10 10 0.01" rgba="1 1 1 1" material="m3_road_mat" contype="0" conaffinity="0" />
+    <camera name="stage3_top" fovy="60" pos="-28 0 23" xyaxes="1 0 0 0 1 0" />
+  </worldbody>
+</mujoco>

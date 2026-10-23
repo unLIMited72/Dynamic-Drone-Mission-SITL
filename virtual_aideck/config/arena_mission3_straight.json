@@ -1,0 +1,27 @@
+{
+  "source_sim_fps": 40,
+  "flowdeck": true,
+  "firmware_udp_port": 20150,
+  "crtp_udp_port": 20050,
+  "camera_udp_port": 15200,
+  "cpx_tcp_port": 5000,
+  "log_dir": "virtual_aideck/runtime_logs",
+  "state_dir": "virtual_aideck/runtime_state",
+  "network_poll_us": 100,
+  "state_link": {
+    "enabled": true,
+    "transport": "uart",
+    "baud_rate": 1000000,
+    "frame_association": true,
+    "frame_state_send": true,
+    "diagnostics": false
+  },
+  "arena": {
+    "scenario": "mission3_straight",
+    "rover": {
+      "speed_mps": 0.15,
+      "startup_delay_s": 0.0,
+      "duration_s": 180.0
+    }
+  }
+}

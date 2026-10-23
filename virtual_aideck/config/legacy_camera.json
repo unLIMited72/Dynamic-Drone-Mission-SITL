@@ -1,0 +1,10 @@
+{
+  "source_sim_fps": 40,
+  "flowdeck": true,
+  "firmware_udp_port": 20150,
+  "crtp_udp_port": 20050,
+  "camera_udp_port": 15200,
+  "cpx_tcp_port": 5000,
+  "log_dir": "virtual_aideck/runtime_logs",
+  "state_dir": "virtual_aideck/runtime_state"
+}

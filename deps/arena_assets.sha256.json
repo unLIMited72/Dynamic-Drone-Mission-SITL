@@ -1,0 +1,12 @@
+{
+  "virtual_aideck/runtime/arena/vendor/sim_final/config.json": "4b3ae2c3b1e023686e2ff42bfd6ca2f9bf440030b2bddefe5e9f8e8f39c603db",
+  "virtual_aideck/runtime/arena/vendor/sim_final/FINAL_FREEZE_MANIFEST.json": "9b06f6aebf6c8970eaa0154bce7e44335ae43da131f41c78296b684455cd34fb",
+  "virtual_aideck/runtime/arena/vendor/sim_final/world.xml": "42f99721550c676a9721f2479e416819fd01df3222e1832b3fef24e82360b295",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/id0.png": "ee50e6f4167f64d9805dda50191d10c5ec688e2ea86a1f67a8165faf64500212",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/m3_road.png": "84d10e0a5ccb6045375d8f9bb1455fd8aad08957bf553b27bbaeae10e626646e",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/id1.png": "9971eabd565ef6176d670b8892ba4e6efb4c8b7d7c13b569de1b3a6886fa68dc",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/start_pad.png": "2a8eb3103e010af54efe20e80cef5d36398a0becde18eacb927a5cd786425767",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/floor.png": "8e27a3e7c62aa109bacf301c5bcdda30560a0808ddaa37089ae83adf025962b0",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/id3.png": "9721d57368ad36bdf079fa6e13773078bc3da7db2af97322c47a2fcb3699edf8",
+  "virtual_aideck/runtime/arena/vendor/sim_final/assets/id2.png": "8b815e1c468da1cac6231cb7d05f2b421b1d01492c11bc37861f6c125b5c69a9"
+}

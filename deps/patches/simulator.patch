@@ -1,0 +1,93 @@
+diff --git a/simulator_files/mujoco/crazysim.py b/simulator_files/mujoco/crazysim.py
+index d4a7eb9..edcf543 100644
+--- a/simulator_files/mujoco/crazysim.py
++++ b/simulator_files/mujoco/crazysim.py
+@@ -570,13 +570,13 @@ def _patch_drone_spec(spec: mujoco.MjSpec, params: MotorParams) -> None:
+ 
+ 
+ def _build_spec_multi(drone_xml: str, spawn_positions: list[tuple[float, float]],
+-                      params: MotorParams) -> mujoco.MjSpec:
++                      params: MotorParams, scene_path: str | None = None) -> mujoco.MjSpec:
+     """
+     Combine scene.xml + N drone models using MjSpec.
+     Each drone body is attached at a unique spawn position with a unique
+     name prefix (cf0_, cf1_, ...) to avoid name collisions.
+     """
+-    scene_spec = mujoco.MjSpec.from_file(_SCENE_XML)
++    scene_spec = mujoco.MjSpec.from_file(scene_path or _SCENE_XML)
+     scene_spec.copy_during_attach = True
+ 
+     for i, (x, y) in enumerate(spawn_positions):
+@@ -592,13 +592,13 @@ def _build_spec_multi(drone_xml: str, spawn_positions: list[tuple[float, float]]
+ 
+ 
+ def _build_spec_multi_safe(drone_xml: str, spawn_positions: list[tuple[float, float]],
+-                           params: MotorParams) -> mujoco.MjModel:
++                           params: MotorParams, scene_path: str | None = None) -> mujoco.MjModel:
+     """
+     Build multi-agent model. Falls back to mesh-stripped drone if STL assets
+     are missing.
+     """
+     try:
+-        return _build_spec_multi(drone_xml, spawn_positions, params).compile()
++        return _build_spec_multi(drone_xml, spawn_positions, params, scene_path).compile()
+     except ValueError as exc:
+         err = str(exc)
+         if 'opening file' not in err and '.stl' not in err.lower():
+@@ -607,7 +607,7 @@ def _build_spec_multi_safe(drone_xml: str, spawn_positions: list[tuple[float, fl
+         print('[crazysim] (Run `git submodule update --init` to fetch drone-models.)')
+         stripped_xml = _strip_meshes(drone_xml)
+ 
+-        scene_spec = mujoco.MjSpec.from_file(_SCENE_XML)
++        scene_spec = mujoco.MjSpec.from_file(scene_path or _SCENE_XML)
+         scene_spec.copy_during_attach = True
+ 
+         for i, (x, y) in enumerate(spawn_positions):
+@@ -1191,7 +1191,9 @@ class CrazySimMuJoCo:
+                  camera_enabled: bool = False,
+                  cam_width: int = 324, cam_height: int = 244,
+                  cam_fps: float = 20.0,
+-                 cam_port: int | None = None):
++                 cam_port: int | None = None,
++                 scene_path: str | None = None,
++                 scene_initializer=None):
+         self.host = host
+         self.visualize = visualize
+         self.dt = timestep
+@@ -1229,9 +1231,11 @@ class CrazySimMuJoCo:
+             print(f'[crazysim] features   : {", ".join(features)}')
+ 
+         # Build shared MuJoCo model with all drones
+-        self.model = _build_spec_multi_safe(model_path, spawn_positions, params)
++        self.model = _build_spec_multi_safe(model_path, spawn_positions, params, scene_path)
+         self.model.opt.timestep = self.dt
+         self.data = mujoco.MjData(self.model)
++        self._scene_adapter = scene_initializer(self.model, self.data) if scene_initializer else None
++        self._scene_enabled = scene_initializer is not None
+ 
+         # Create per-drone agents
+         self.agents: list[DroneAgent] = []
+@@ -1314,7 +1318,14 @@ class CrazySimMuJoCo:
+                 agent.update_led_materials()
+             if self._downwash and self.num_agents > 1:
+                 self._apply_downwash()
++            if self._scene_adapter is not None:
++                self._scene_adapter.update(self.model, self.data)
+             mujoco.mj_step(self.model, self.data)
++            # Refresh only position kinematics after advancing prescribed rover pose.
++            # Do not recompute accelerations/IMU via a second mj_forward.
++            if self._scene_adapter is not None:
++                self._scene_adapter.update(self.model, self.data)
++                mujoco.mj_kinematics(self.model, self.data)
+             for agent in self.agents:
+                 agent.send_sensor_data()
+ 
+@@ -1351,7 +1362,7 @@ class CrazySimMuJoCo:
+                             v.cam.azimuth = 0.0
+                             v.cam.elevation = -20.0
+                             v.cam.distance = 3.0
+-                            v.cam.lookat[:] = [0.0, 0.0, 0.5]
++                            v.cam.lookat[:] = (self.data.xpos[self.agents[0]._body_id] if self._scene_enabled else [0.0, 0.0, 0.5])
+                             _cam_init_frames -= 1
+                     _update_rtf()
+                     if t0 - _last_render >= _render_interval:

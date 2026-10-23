@@ -1,0 +1,119 @@
+[
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/world.xml",
+    "copied_target": "vendor/sim_final/world.xml",
+    "source_sha256": "42f99721550c676a9721f2479e416819fd01df3222e1832b3fef24e82360b295",
+    "target_sha256": "42f99721550c676a9721f2479e416819fd01df3222e1832b3fef24e82360b295",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/config.json",
+    "copied_target": "vendor/sim_final/config.json",
+    "source_sha256": "4b3ae2c3b1e023686e2ff42bfd6ca2f9bf440030b2bddefe5e9f8e8f39c603db",
+    "target_sha256": "4b3ae2c3b1e023686e2ff42bfd6ca2f9bf440030b2bddefe5e9f8e8f39c603db",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/FINAL_FREEZE_MANIFEST.json",
+    "copied_target": "vendor/sim_final/FINAL_FREEZE_MANIFEST.json",
+    "source_sha256": "9b06f6aebf6c8970eaa0154bce7e44335ae43da131f41c78296b684455cd34fb",
+    "target_sha256": "9b06f6aebf6c8970eaa0154bce7e44335ae43da131f41c78296b684455cd34fb",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/id0.png",
+    "copied_target": "vendor/sim_final/assets/id0.png",
+    "source_sha256": "ee50e6f4167f64d9805dda50191d10c5ec688e2ea86a1f67a8165faf64500212",
+    "target_sha256": "ee50e6f4167f64d9805dda50191d10c5ec688e2ea86a1f67a8165faf64500212",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/m3_road.png",
+    "copied_target": "vendor/sim_final/assets/m3_road.png",
+    "source_sha256": "84d10e0a5ccb6045375d8f9bb1455fd8aad08957bf553b27bbaeae10e626646e",
+    "target_sha256": "84d10e0a5ccb6045375d8f9bb1455fd8aad08957bf553b27bbaeae10e626646e",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/id1.png",
+    "copied_target": "vendor/sim_final/assets/id1.png",
+    "source_sha256": "9971eabd565ef6176d670b8892ba4e6efb4c8b7d7c13b569de1b3a6886fa68dc",
+    "target_sha256": "9971eabd565ef6176d670b8892ba4e6efb4c8b7d7c13b569de1b3a6886fa68dc",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/start_pad.png",
+    "copied_target": "vendor/sim_final/assets/start_pad.png",
+    "source_sha256": "2a8eb3103e010af54efe20e80cef5d36398a0becde18eacb927a5cd786425767",
+    "target_sha256": "2a8eb3103e010af54efe20e80cef5d36398a0becde18eacb927a5cd786425767",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/floor.png",
+    "copied_target": "vendor/sim_final/assets/floor.png",
+    "source_sha256": "8e27a3e7c62aa109bacf301c5bcdda30560a0808ddaa37089ae83adf025962b0",
+    "target_sha256": "8e27a3e7c62aa109bacf301c5bcdda30560a0808ddaa37089ae83adf025962b0",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/id3.png",
+    "copied_target": "vendor/sim_final/assets/id3.png",
+    "source_sha256": "9721d57368ad36bdf079fa6e13773078bc3da7db2af97322c47a2fcb3699edf8",
+    "target_sha256": "9721d57368ad36bdf079fa6e13773078bc3da7db2af97322c47a2fcb3699edf8",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/baselines/sim_final/assets/id2.png",
+    "copied_target": "vendor/sim_final/assets/id2.png",
+    "source_sha256": "8b815e1c468da1cac6231cb7d05f2b421b1d01492c11bc37861f6c125b5c69a9",
+    "target_sha256": "8b815e1c468da1cac6231cb7d05f2b421b1d01492c11bc37861f6c125b5c69a9",
+    "transformation": "byte copy",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/m3_20x20/motion.py",
+    "copied_target": "motion/vehicle.py",
+    "source_sha256": "aebaf3f935a463b27a5325de93fcfef2cf9c55a4ddf78d157852747e87ac250b",
+    "target_sha256": "94888a6c704bc22275b40f8be8a170dd4358dc845e405e5d83dad43b927250e9",
+    "transformation": "adapt import / extract used classes",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/integrated_arena/motion.py",
+    "copied_target": "motion/paths.py",
+    "source_sha256": "1408f1624fee8f133c6049343846d228ee94845de0198b30ac5da582cd94ade7",
+    "target_sha256": "2a85405f457e9157c65b4e5c8905f22ee3e9373c9b17688f9138a5efa1e155f1",
+    "transformation": "adapt import / extract used classes",
+    "runtime_required": true,
+    "external_dependency": "None"
+  },
+  {
+    "original_source": "tools/mission3_world_environment/stadium_motion.py",
+    "copied_target": "motion/stadium.py",
+    "source_sha256": "a37085bf053a42d01160844346f5f77d7d988cb345c1a6e650b2efbe0a6a5ed0",
+    "target_sha256": "d58fbd4dea8d487b294258cd95cb83b210220958b96e38c9cd95fd87f9c27bfc",
+    "transformation": "adapt import / extract used classes",
+    "runtime_required": true,
+    "external_dependency": "None"
+  }
+]
