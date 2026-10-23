@@ -28,6 +28,9 @@ if (( CHECK )); then
  "$ROOT/scripts/bootstrap_external.sh" --check
  [[ -x "$ROOT/Drone/bin/python" ]]
  "$ROOT/Drone/bin/python" -c 'import mujoco,numpy,cflib; assert mujoco.__version__=="3.16.0"; print("MuJoCo",mujoco.__version__)'
+ [[ -x "$ROOT/third_party/gap_riscv_toolchain/bin/riscv32-unknown-elf-gcc" ]]
+ [[ -x "$ROOT/third_party/gap_sdk/install/workstation/bin/gvsoc_launcher" ]]
+ "$ROOT/third_party/gap_sdk_venv/bin/python" -c 'from elftools.elf.elffile import ELFFile; print("SDK Python imports PASS")'
  (( ${#missing[@]} == 0 )); exit
 fi
 (( ACCEPT )) || { echo 'Required upstream drone-models has UNVERIFIED rights. Read docs/EXTERNAL_DEPENDENCIES.md; explicit --accept-unverified-license is required.'; exit 2; }

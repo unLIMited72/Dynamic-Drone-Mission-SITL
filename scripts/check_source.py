@@ -12,4 +12,15 @@ for row in lock['repositories']:
  if row['patch']:assert hashlib.sha256((R/row['patch']).read_bytes()).hexdigest()==row['patch_sha256']
 assets=json.loads((R/'deps/arena_assets.sha256.json').read_text())
 for rel,sha in assets.items():assert hashlib.sha256((R/rel).read_bytes()).hexdigest()==sha,rel
+import sys
+sys.path.insert(0,str(R/'virtual_aideck/runtime'))
+from arena.config import resolve
+for scenario in ('integrated','mission3'):
+ for rover in ({'mode':'loop'},{'mode':'grid','grid_route':0},{'mode':'grid','grid_route':1},{'mode':'shuttle','shuttle_behavior':'reverse'},{'mode':'shuttle','shuttle_behavior':'turn'}):
+  resolve({'scenario':scenario,'rover':rover})
+for speed in (0,.1,.15,.2,.3):resolve({'scenario':'mission3_straight','rover':{'speed_mps':speed}})
+for bad in (-.1,float('nan'),float('inf'),.31):
+ try:resolve({'scenario':'mission3_straight','rover':{'speed_mps':bad}})
+ except ValueError:pass
+ else:raise AssertionError('Invalid speed accepted')
 print('Source syntax, JSON, patch and Arena asset hashes PASS; Native E2E NOT_RUN')
