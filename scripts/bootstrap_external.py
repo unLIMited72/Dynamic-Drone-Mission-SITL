@@ -20,6 +20,7 @@ def main():
   if patch and digest(patch)!=dep['patch_sha256']:raise SystemExit('Patch hash mismatch')
   if dest.exists() and any(dest.iterdir()):
    if not (dest/'.git').exists() or git(dest,'rev-parse','HEAD')!=commit or git(dest,'remote','get-url','origin')!=url:raise SystemExit('Protecting unexpected existing dependency: '+str(dest))
+   if git(dest,'diff','--cached','--binary','--ignore-submodules=all'):raise SystemExit('Protecting staged dependency changes: '+str(dest))
    untracked=git(dest,'ls-files','--others','--exclude-standard')
    if untracked:raise SystemExit('Protecting untracked dependency files: '+str(dest))
    expected=patch.read_text().strip() if patch else ''

@@ -12,4 +12,7 @@ for name in ('MutableMapping', 'Mapping', 'MutableSequence', 'Sequence', 'Iterab
 if module.exists() and module.read_text() != content:
     raise SystemExit('Refusing to overwrite modified SDK compatibility module')
 module.write_text(content)
-(p / 'mission_sdk_compat.pth').write_text('import mission_sdk_compat\n')
+pth=p / 'mission_sdk_compat.pth'
+if pth.exists() and pth.read_text() != 'import mission_sdk_compat\n':
+    raise SystemExit('Refusing to overwrite modified SDK compatibility startup')
+pth.write_text('import mission_sdk_compat\n')
